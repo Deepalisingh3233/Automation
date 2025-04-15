@@ -1,17 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="6" total="11" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-15T11:58:59 IST" name="Default suite" finished-at="2025-04-15T11:58:59 IST" duration-ms="48">
+  <suite started-at="2025-04-15T18:36:24 IST" name="Loan Department" finished-at="2025-04-15T18:36:24 IST" duration-ms="167">
     <groups>
     </groups>
-    <test started-at="2025-04-15T11:58:59 IST" name="Default test" finished-at="2025-04-15T11:58:59 IST" duration-ms="48">
-      <class name="demo">
-        <test-method signature="demo()[pri:0, instance:demo@27ce24aa]" started-at="2025-04-15T11:58:59 IST" name="demo" finished-at="2025-04-15T11:58:59 IST" duration-ms="6" status="PASS">
+    <test started-at="2025-04-15T18:36:24 IST" name="Personal Loan" finished-at="2025-04-15T18:36:24 IST" duration-ms="68">
+      <class name="basics.Day2">
+        <test-method is-config="true" signature="preRequiste()[pri:0, instance:basics.Day2@5ffead27]" started-at="2025-04-15T18:36:24 IST" name="preRequiste" finished-at="2025-04-15T18:36:24 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- demo -->
-      </class> <!-- demo -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- preRequiste -->
+        <test-method signature="ploan()[pri:0, instance:basics.Day2@5ffead27]" started-at="2025-04-15T18:36:24 IST" name="ploan" finished-at="2025-04-15T18:36:24 IST" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ploan -->
+        <test-method is-config="true" signature="lastExecution()[pri:0, instance:basics.Day2@5ffead27]" started-at="2025-04-15T18:36:24 IST" name="lastExecution" finished-at="2025-04-15T18:36:24 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- lastExecution -->
+      </class> <!-- basics.Day2 -->
+      <class name="basics.Day4">
+        <test-method signature="loginAPIHomeLoan()[pri:0, instance:basics.Day4@6356695f]" started-at="2025-04-15T18:36:24 IST" name="loginAPIHomeLoan" finished-at="2025-04-15T18:36:24 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginAPIHomeLoan -->
+        <test-method signature="mobileLoginHomeLoan()[pri:0, instance:basics.Day4@6356695f]" started-at="2025-04-15T18:36:24 IST" name="mobileLoginHomeLoan" finished-at="2025-04-15T18:36:24 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- mobileLoginHomeLoan -->
+        <test-method signature="webLoginHomeLoan()[pri:0, instance:basics.Day4@6356695f]" started-at="2025-04-15T18:36:24 IST" name="webLoginHomeLoan" finished-at="2025-04-15T18:36:24 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- webLoginHomeLoan -->
+      </class> <!-- basics.Day4 -->
+    </test> <!-- Personal Loan -->
+    <test started-at="2025-04-15T18:36:24 IST" name="Car Loan" finished-at="2025-04-15T18:36:24 IST" duration-ms="11">
+      <class name="basics.Day1">
+        <test-method is-config="true" signature="afSuite()[pri:0, instance:basics.Day1@5af3afd9]" started-at="2025-04-15T18:36:24 IST" name="afSuite" finished-at="2025-04-15T18:36:24 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afSuite -->
+      </class> <!-- basics.Day1 -->
+      <class name="basics.Day3">
+        <test-method is-config="true" signature="bfSuite()[pri:0, instance:basics.Day3@3349e9bb]" started-at="2025-04-15T18:36:24 IST" name="bfSuite" finished-at="2025-04-15T18:36:24 IST" duration-ms="14" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bfSuite -->
+        <test-method is-config="true" signature="beforeEvery()[pri:0, instance:basics.Day3@3349e9bb]" started-at="2025-04-15T18:36:24 IST" name="beforeEvery" finished-at="2025-04-15T18:36:24 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeEvery -->
+        <test-method signature="webLoginCarLoan()[pri:0, instance:basics.Day3@3349e9bb]" started-at="2025-04-15T18:36:24 IST" name="webLoginCarLoan" finished-at="2025-04-15T18:36:24 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- webLoginCarLoan -->
+        <test-method is-config="true" signature="afterEvery()[pri:0, instance:basics.Day3@3349e9bb]" started-at="2025-04-15T18:36:24 IST" name="afterEvery" finished-at="2025-04-15T18:36:24 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEvery -->
+      </class> <!-- basics.Day3 -->
+    </test> <!-- Car Loan -->
+  </suite> <!-- Loan Department -->
 </testng-results>

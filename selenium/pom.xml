@@ -20,6 +20,11 @@
     <scope>test</scope>
 </dependency>
 
-	
+
+  	<dependency>
+  		<groupId>TestNGPractice</groupId>
+  		<artifactId>TESTNG</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
   </dependencies>
 </project>
