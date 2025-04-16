@@ -1,6 +1,8 @@
 package basics;
 
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 
 public class Day4 {
 	
@@ -10,7 +12,7 @@ public class Day4 {
 		System.out.println("Web Login Home");
 	}
 	
-	@Test
+	@Test(groups = {"Smoke"})
 	public void mobileLoginHomeLoan() {
 		//Appium
 		System.out.println("Mobile login Home");
