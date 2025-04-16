@@ -7,6 +7,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 
 public class Day3 {
@@ -24,10 +25,12 @@ public class Day3 {
 		System.out.println(urlName + " " + apiKey);
 	}
 	
-	@Test(timeOut = 4000)
-	public void mobileLoginCarLoan() {
+	@Test(dataProvider = "getData")
+	public void mobileLoginCarLoan(String username, String password) {
 		//Appium
 		System.out.println("Mobile login Car");
+		System.out.println(username);
+		System.out.println(password);
 	}
 	
 	
@@ -68,5 +71,28 @@ public class Day3 {
 	public void  APICarLoan() {
 		//Rest API
 		System.out.println("API Login Car");
+	}
+	
+	@DataProvider
+	public Object getData() {
+		//1st combination - username password - good credit history -row
+		//2nd combination - username password - no credit history
+		//3rd combination - fraudelent credit history
+		
+		Object[][] data = new Object[3][2];
+		//1st set data
+		data[0][0] = "firstSetUsername";
+		data[0][1] = "firstpassword";
+		
+		//2nd set
+		data[1][0] = "secondSetUsername";
+		data[1][1] = "secondpassword";
+		
+		//3rd set
+		data[2][0] = "thirdSetUsername";
+		data[2][1] = "thirdpassword";
+		
+		return data;
+		
 	}
 }

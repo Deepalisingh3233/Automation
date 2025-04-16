@@ -25,7 +25,6 @@
 				<methods>
 					<!-- <exclude name="mobileLoginCarLoan" /> -->
 					<!-- Use of regex-->
-					<exclude name="mobile.*" />
 					<exclude name="API.*"/>
 				</methods>
 			</class>
