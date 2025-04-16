@@ -1,13 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Loan Department]" guice-stage="DEVELOPMENT">
+  <parameter name="URL" value="qaclickacademy.com"/>
+  <listeners>
+    <listener class-name="basics.Listeners"/>
+  </listeners>
   <test thread-count="5" name="Personal Loan(failed)">
     <classes>
-      <class name="basics.Day2">
+      <class name="basics.Day1">
         <methods>
-          <include name="ploan"/>
+          <include name="afSuite"/>
+          <include name="demo"/>
         </methods>
-      </class> <!-- basics.Day2 -->
+      </class> <!-- basics.Day1 -->
     </classes>
   </test> <!-- Personal Loan(failed) -->
+  <test thread-count="5" name="Car Loan(failed)">
+    <parameter name="APIKey/username" value="12345"/>
+    <classes>
+      <class name="basics.Day1">
+        <methods>
+          <include name="afSuite"/>
+          <include name="demo"/>
+        </methods>
+      </class> <!-- basics.Day1 -->
+    </classes>
+  </test> <!-- Car Loan(failed) -->
 </suite> <!-- Failed suite [Loan Department] -->
