@@ -2,16 +2,12 @@ package basics;
 
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
+
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.Test;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.Test;
+import org.testng.annotations.Parameters;
 
 public class Day3 {
 	
@@ -20,10 +16,12 @@ public class Day3 {
 		System.out.println("Before executing any method in the class");
 	}
 	
+	@Parameters({"URL", "APIKey/username"})
 	@Test
-	public void webLoginCarLoan() {
+	public void webLoginCarLoan(String urlName, String apiKey) {
 		//selenium
 		System.out.println("Web Login Car");
+		System.out.println(urlName + " " + apiKey);
 	}
 	
 	@Test(timeOut = 4000)

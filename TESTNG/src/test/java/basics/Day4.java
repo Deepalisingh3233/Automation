@@ -1,15 +1,18 @@
 package basics;
 
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 
 public class Day4 {
 	
+	@Parameters("URL")
 	@Test
-	public void webLoginHomeLoan() {
+	public void webLoginHomeLoan(String urlName) {
 		//selenium
 		System.out.println("Web Login Home");
+		System.out.println(urlName);
 	}
 	
 	@Test(groups = {"Smoke"})
