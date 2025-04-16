@@ -26,7 +26,7 @@ public class Day3 {
 		System.out.println("Web Login Car");
 	}
 	
-	@Test
+	@Test(timeOut = 4000)
 	public void mobileLoginCarLoan() {
 		//Appium
 		System.out.println("Mobile login Car");
@@ -43,7 +43,7 @@ public class Day3 {
 		System.out.println("After executing all methods in the class");
 	}
 	
-	@Test
+	@Test(enabled = false)
 	public void mobileSigninCarLoan() {
 		//Appium
 		System.out.println("Mobile Signin Car");
@@ -66,7 +66,7 @@ public class Day3 {
 	}
 
 
-	@Test
+	@Test(dependsOnMethods = {"webLoginCarLoan", "mobileSignoutCarLoan"})
 	public void  APICarLoan() {
 		//Rest API
 		System.out.println("API Login Car");

@@ -4,7 +4,8 @@
   <test name="Regression">
   <groups>
   	<run>
-  		<include name="Smoke"></include>
+  		<include name="Smoke"/>
+  		<!-- <exclude name="Smoke"/>  -->
   	</run>
   </groups>
     <classes>
