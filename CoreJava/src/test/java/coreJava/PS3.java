@@ -4,6 +4,10 @@ public class PS3 {
 	
 	int a;
 	
+	public PS3(int a) {
+		this.a = a;
+	}
+
 	public int multipleTwo() {
 		
 		a = a*2;
@@ -12,7 +16,7 @@ public class PS3 {
 	
 	public int multipleThree() {
 		
-		a = a*2;
+		a = a*3;
 		return a;
 	}
 

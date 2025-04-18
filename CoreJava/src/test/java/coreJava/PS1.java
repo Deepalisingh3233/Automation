@@ -21,6 +21,8 @@ public class PS1 extends PS{
 		System.out.println(ps2.increment());
 		System.out.println(ps2.decrement());
 
+//		PS3 ps3 = new PS3(a);
+		System.out.println(ps2.multipleThree());
 	}
 
 }
