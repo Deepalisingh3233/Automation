@@ -3,8 +3,8 @@
   <groupId>deepalisingh</groupId>
   <artifactId>SeleniumFrameworkDesign</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-
-	<dependencies>
+  
+   <dependencies>
 		<!--
 		https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 		<dependency>
@@ -21,6 +21,8 @@
 			<scope>test</scope>
 		</dependency>
 
+	
+  </dependencies>
 
-	</dependencies>
+
 </project>
