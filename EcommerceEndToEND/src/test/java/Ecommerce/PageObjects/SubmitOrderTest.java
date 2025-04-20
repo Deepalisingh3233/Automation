@@ -27,44 +27,22 @@ public class SubmitOrderTest {
 		
 		LandingPage landingPage = new LandingPage(driver);
 		landingPage.goTo();
-		landingPage.loginApplication("kartikey2@mightcode.com", "Test@123");
+		ProductCatalogue productCatalogue = landingPage.loginApplication("kartikey2@mightcode.com", "Test@123");
+//		ProductCatalogue productCatalogue = new ProductCatalogue(driver);
 		
-		ProductCatalogue productCatalogue = new ProductCatalogue(driver);
 		List<WebElement> products = productCatalogue.getProductList();
 		productCatalogue.addproductTocart(productName);
-		productCatalogue.goToCartPagae();
+		CartPage cartPage = productCatalogue.goToCartPagae();
+//		CartPage cartPage = new CartPage(driver);
 		
-		
-		List<WebElement> cartProducts = driver.findElements(By.cssSelector(".cartSection h3"));
-		Boolean match =cartProducts.stream().anyMatch(cartProduct -> cartProduct.getText().equalsIgnoreCase(productName));
+		Boolean match = cartPage.verifyProductDisplay(productName);
 		Assert.assertTrue(match);
+		CheckoutPage checkoutPage = cartPage.goToCheckout();
+		checkoutPage.selectCountry("india");
+		ConfirmationPage confirmationPage = checkoutPage.submitOrder();
 		
-		driver.findElement(By.cssSelector(".totalRow button")).click();
-		
-//		driver.findElement(By.xpath("//input[@placeholder='Select Country']")).sendKeys("india");
-//		driver.findElement(By.cssSelector("[class*='list-group'] button:last-of-type ")).click();
-//		
-//		driver.findElement(By.cssSelector(".actions a")).click();
-		
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 
-		
-		Actions a = new Actions(driver);
-		a.sendKeys(driver.findElement(By.xpath("//input[@placeholder='Select Country']")), "india").build().perform();
-		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.cssSelector(".ta-results")));
-		
-		driver.findElement(By.xpath("(//button[contains(@class,'ta-item')])[2]")).click();
-		 wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".action__submit")));
-		 WebElement btn = driver.findElement(By.cssSelector(".action__submit"));
-		 System.out.println("Displayed: " + btn.isDisplayed());
-		 System.out.println("Enabled: " + btn.isEnabled());
-		 			
-//		driver.findElement(By.cssSelector(".action__submit i")).click();
-//		driver.findElement(By.cssSelector(".actions a i")).click();
-		driver.findElement(By.xpath("//a[contains(text(),'Place Order')]/i")).click();
-//		driver.findElement(By.xpath("//i[@class='icon icon-arrow-right-circle']")).click();
-
-		String confirmMessage = driver.findElement(By.cssSelector("hero-primary")).getText();
+		String confirmMessage = confirmationPage.getConfirmationMesssage();
 		Assert.assertTrue(confirmMessage.equalsIgnoreCase("THANKYOU FOR THE ORDER."));
 		driver.close();
 	}

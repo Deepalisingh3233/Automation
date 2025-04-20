@@ -27,7 +27,12 @@ WebDriver driver;
 	
 	public Boolean verifyProductDisplay(String productName) {
 		Boolean match = productTitles.stream().anyMatch(cartProduct -> cartProduct.getText().equalsIgnoreCase(productName));
-
+		return match;
+	}
+	
+	public CheckoutPage goToCheckout() {
+		checkOutEle.click();
+		return new CheckoutPage(driver);
 	}
 	
 }

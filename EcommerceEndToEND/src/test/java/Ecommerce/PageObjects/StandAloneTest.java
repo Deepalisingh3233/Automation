@@ -64,10 +64,8 @@ public class StandAloneTest {
 		 System.out.println("Displayed: " + btn.isDisplayed());
 		 System.out.println("Enabled: " + btn.isEnabled());
 		 			
-//		driver.findElement(By.cssSelector(".action__submit i")).click();
-//		driver.findElement(By.cssSelector(".actions a i")).click();
-		driver.findElement(By.xpath("//a[contains(text(),'Place Order')]/i")).click();
-//		driver.findElement(By.xpath("//i[@class='icon icon-arrow-right-circle']")).click();
+		 //Make the screen 80%
+		driver.findElement(By.cssSelector(".action__submit i")).click();
 
 		String confirmMessage = driver.findElement(By.cssSelector("hero-primary")).getText();
 		Assert.assertTrue(confirmMessage.equalsIgnoreCase("THANKYOU FOR THE ORDER."));
