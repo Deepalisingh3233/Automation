@@ -1,4 +1,4 @@
-package Ecommerce.PageObjects;
+package Ecommerce.Tests;
 
 import java.time.Duration;
 import java.util.List;

@@ -1,4 +1,4 @@
-package Ecommerce.PageObjects;
+package Ecommerce.Tests;
 import java.time.Duration;
 import java.util.List;
 
@@ -11,7 +11,11 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import Ecommerce.PageObjects.CartPage;
+import Ecommerce.PageObjects.CheckoutPage;
+import Ecommerce.PageObjects.ConfirmationPage;
 import Ecommerce.PageObjects.LandingPage;
+import Ecommerce.PageObjects.ProductCatalogue;
 
 public class SubmitOrderTest {
 
