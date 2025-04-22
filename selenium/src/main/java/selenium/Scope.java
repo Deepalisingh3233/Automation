@@ -26,7 +26,7 @@ public class Scope {
         WebElement columnDriver = footerDriver.findElement(By.xpath("//table/tbody/tr/td[1]/ul"));
         System.out.println(columnDriver.findElements(By.tagName("a")).size());
 
-        // Click on each link in teh column and check if the pages are opening;
+        // Click on each link in the column and check if the pages are opening;
         for (int i = 1; i < columnDriver.findElements(By.tagName("a")).size(); i++) {
 
             String clickOnLink = Keys.chord(Keys.CONTROL, Keys.ENTER);
