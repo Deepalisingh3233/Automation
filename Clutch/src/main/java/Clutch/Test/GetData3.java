@@ -7,24 +7,40 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class GetData3 {
 
 	public static void main(String[] args) throws InterruptedException {
+		
+		ChromeOptions options = new ChromeOptions();
+		options.setExperimentalOption("useAutomationExtension", false);
+		options.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
+		options.addArguments("--disable-blink-features=AutomationControlled");
 
-		WebDriver driver = new ChromeDriver();
+		WebDriver driver = new ChromeDriver(options);
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		driver.get("https://clutch.co/us/developers/information-technology-industry");
 				
 //		List<WebElement> providerHighlights = driver.findElements(By.cssSelector(".provider-list-item"));
-		WebElement nextPagi = driver.findElement(By.xpath("//a[@title='Go to Next Page']")); 
-		int count =1; 
-		
-		while(nextPagi.isEnabled()) {
+		//Go to Page 2
+		String isEnabled = driver.findElement(By.xpath("//a[@title='Go to Next Page']")).getDomAttribute("disabled"); 
+		int count = 1; 
+		int pagiCount = 2;
+		while(isEnabled.equalsIgnoreCase("true")) {
+			Thread.sleep(6000);
 			List<WebElement> providerHighlights = driver.findElements(By.cssSelector(".provider-list-item"));
-
 			for (WebElement element : providerHighlights) {
+				String companyName = element.findElement(By.className("provider__title")).getText();
+				if(companyName == null || companyName.isEmpty() || companyName.isBlank()) {
+					Thread.sleep(5000);
+//					nextPagi.click();
+					String xpath = String.format("//a[@title='Go to Page %d']", pagiCount);
+					driver.findElement(By.xpath(xpath)).click();
+					pagiCount++;
+					break;
+				}
 				System.out.println(count+" Company Name  -> "+element.findElement(By.className("provider__title")).getText());
 				
 				System.out.println("Min Project Size -> "+ element.findElement(By.cssSelector("[class*='min-project-size']")).getText());
@@ -55,11 +71,7 @@ public class GetData3 {
 				System.out.println("--------------------");
 				count++;
 				
-				if(count == 66) {
-					Thread.sleep(3000);
-					nextPagi.click();
-					break;
-				}
+				
 			}
 		}
 		
