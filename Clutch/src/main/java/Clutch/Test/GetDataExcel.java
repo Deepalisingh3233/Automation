@@ -21,7 +21,7 @@ public class GetDataExcel {
         options.setExperimentalOption("useAutomationExtension", false);
         options.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
         options.addArguments("--disable-blink-features=AutomationControlled");
-
+        System.out.println("Current working directory: " + System.getProperty("user.dir"));
         WebDriver driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
@@ -47,10 +47,16 @@ public class GetDataExcel {
 
         // Go to Page 2
         String isEnabled = driver.findElement(By.xpath("//a[@title='Go to Next Page']")).getDomAttribute("disabled"); 
+        
         while(isEnabled.equalsIgnoreCase("true")) {
             Thread.sleep(6000);
             List<WebElement> providerHighlights = driver.findElements(By.cssSelector(".provider-list-item"));
             for (WebElement element : providerHighlights) {
+            	
+            	if(pagiCount == 40) {
+                	break;
+                }
+            	
                 Row row = sheet.createRow(count);
                 String companyName = element.findElement(By.className("provider__title")).getText();
                 
@@ -60,6 +66,9 @@ public class GetDataExcel {
                     driver.findElement(By.xpath(xpath)).click();
                     pagiCount++;
                     break;
+                }
+                if(pagiCount == 40) {
+                	break;
                 }
 
                 row.createCell(0).setCellValue(companyName);
@@ -90,9 +99,9 @@ public class GetDataExcel {
         }
 
         // Write the output to a file
-        try (FileOutputStream fileOut = new FileOutputStream("CompanyData.xlsx")) {
-            workbook.write(fileOut);
-        }
+        FileOutputStream fileOut = new FileOutputStream("CompanyData.xlsx");
+        workbook.write(fileOut);
+        
 
         // Close the workbook and driver
         workbook.close();
