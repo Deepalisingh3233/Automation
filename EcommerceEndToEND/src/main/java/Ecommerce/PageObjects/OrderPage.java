@@ -9,11 +9,11 @@ import org.openqa.selenium.support.PageFactory;
 
 import Ecommerce.AbstractComponents.AbstractComponents;
 
-public class CartPage extends AbstractComponents{
+public class OrderPage extends AbstractComponents{
 
 WebDriver driver;
 	
-	public CartPage(WebDriver driver) {
+	public OrderPage(WebDriver driver) {
 		super(driver);
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
@@ -22,11 +22,11 @@ WebDriver driver;
 	@FindBy(css = ".totalRow button")
 	WebElement checkOutEle;
 	
-	@FindBy(css = ".cartSection h3")
-	private List<WebElement> cartProducts;
+	@FindBy(xpath = "//tr/td[2]")
+	private List<WebElement> productNames;
 	
-	public Boolean verifyProductDisplay(String productName) {
-		Boolean match = cartProducts.stream().anyMatch(cartProduct -> cartProduct.getText().equalsIgnoreCase(productName));
+	public Boolean verifyOrderDisplay(String productName) {
+		Boolean match = productNames.stream().anyMatch(cartProduct -> cartProduct.getText().equalsIgnoreCase(productName));
 		return match;
 	}
 	

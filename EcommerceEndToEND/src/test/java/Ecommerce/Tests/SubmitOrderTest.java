@@ -1,4 +1,8 @@
 package Ecommerce.Tests;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
+import java.io.IOException;
 import java.time.Duration;
 import java.util.List;
 
@@ -10,34 +14,31 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.Test;
 
 import Ecommerce.PageObjects.CartPage;
 import Ecommerce.PageObjects.CheckoutPage;
 import Ecommerce.PageObjects.ConfirmationPage;
 import Ecommerce.PageObjects.LandingPage;
+import Ecommerce.PageObjects.OrderPage;
 import Ecommerce.PageObjects.ProductCatalogue;
+import Ecommerce.TestComponents.BaseTest;
 
-public class SubmitOrderTest {
+public class SubmitOrderTest extends BaseTest{
 
-	public static void main(String[] args) throws InterruptedException {
+	String productName = "ZARA COAT 3";
+
+	@Test(dataProvider = "getData", groups = {"Purchase"})
+	public void SubmitOrder(String email, String password, String productName) throws IOException, InterruptedException{
 		// TODO Auto-generated method stub
 		//WebDriverManager.chromedriver.setup(); download chromedriver in your system
 
-		String productName = "ZARA COAT 3";
-		WebDriver driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		driver.get("https://rahulshettyacademy.com/client/");
-		
-		LandingPage landingPage = new LandingPage(driver);
-		landingPage.goTo();
-		ProductCatalogue productCatalogue = landingPage.loginApplication("kartikey2@mightcode.com", "Test@123");
-//		ProductCatalogue productCatalogue = new ProductCatalogue(driver);
+	
+		ProductCatalogue productCatalogue = landingPage.loginApplication(email, password);
 		
 		List<WebElement> products = productCatalogue.getProductList();
 		productCatalogue.addproductTocart(productName);
 		CartPage cartPage = productCatalogue.goToCartPagae();
-//		CartPage cartPage = new CartPage(driver);
 		
 		Boolean match = cartPage.verifyProductDisplay(productName);
 		Assert.assertTrue(match);
@@ -47,8 +48,23 @@ public class SubmitOrderTest {
 		
 
 		String confirmMessage = confirmationPage.getConfirmationMesssage();
-		Assert.assertTrue(confirmMessage.equalsIgnoreCase("THANKYOU FOR THE ORDER."));
-		driver.close();
+		AssertJUnit.assertTrue(confirmMessage.equalsIgnoreCase("THANKYOU FOR THE ORDER."));
+	}
+	
+	@Test(dependsOnMethods = {"SubmitOrder"})
+	public void OrderHistoryTest() {
+		ProductCatalogue productCatalogue = landingPage.loginApplication("kartikey2@mightcode.com", "Test@123");
+		OrderPage orderPage = productCatalogue.goToOrdersPagae();
+		Assert.assertTrue(orderPage.verifyOrderDisplay(productName));
+		
+	}
+	
+	@DataProvider
+	public Object[][] getData() {
+		return new Object[][] {
+			{"kartikey2@mightcode.com", "Test@123", "ZARA COAT 3"},
+			{"rahulshetty@gmail.com", "Iamking@000", "ADIDAS ORIGINAL"}
+		};
 	}
 
 }

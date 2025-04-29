@@ -22,7 +22,7 @@ public class DriverClass {
 			AbstractComponents loginPage = new AbstractComponents(driver);
 			loginPage.goTo();
 			loginPage.loginWithValidCredentials("105", "Unicode@2022$");
-			
+				
 			Registration registration = new Registration(driver);
 			registration.registration();
 		}
