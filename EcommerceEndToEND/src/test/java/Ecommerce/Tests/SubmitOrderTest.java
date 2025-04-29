@@ -4,6 +4,7 @@ import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
 import java.io.IOException;
 import java.time.Duration;
+import java.util.HashMap;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -29,18 +30,18 @@ public class SubmitOrderTest extends BaseTest{
 	String productName = "ZARA COAT 3";
 
 	@Test(dataProvider = "getData", groups = {"Purchase"})
-	public void SubmitOrder(String email, String password, String productName) throws IOException, InterruptedException{
+	public void SubmitOrder(HashMap<String, String> input) throws IOException, InterruptedException{
 		// TODO Auto-generated method stub
 		//WebDriverManager.chromedriver.setup(); download chromedriver in your system
 
 	
-		ProductCatalogue productCatalogue = landingPage.loginApplication(email, password);
+		ProductCatalogue productCatalogue = landingPage.loginApplication(input.get("email"), input.get("password"));
 		
 		List<WebElement> products = productCatalogue.getProductList();
-		productCatalogue.addproductTocart(productName);
+		productCatalogue.addproductTocart(input.get("productName"));
 		CartPage cartPage = productCatalogue.goToCartPagae();
 		
-		Boolean match = cartPage.verifyProductDisplay(productName);
+		Boolean match = cartPage.verifyProductDisplay(input.get("productName"));
 		Assert.assertTrue(match);
 		CheckoutPage checkoutPage = cartPage.goToCheckout();
 		checkoutPage.selectCountry("india");
@@ -61,10 +62,23 @@ public class SubmitOrderTest extends BaseTest{
 	
 	@DataProvider
 	public Object[][] getData() {
-		return new Object[][] {
-			{"kartikey2@mightcode.com", "Test@123", "ZARA COAT 3"},
-			{"rahulshetty@gmail.com", "Iamking@000", "ADIDAS ORIGINAL"}
-		};
+		
+		HashMap<String, String> map = new HashMap<String, String>();
+		map.put("email", "kartikey2@mightcode.com");
+		map.put("password", "Test@123");
+		map.put("productName", "ZARA COAT 3");
+		
+		HashMap<String, String> map1 = new HashMap<String, String>();
+		map1.put("email", "rahulshetty@gmail.com");
+		map1.put("password", "Iamking@000");
+		map1.put("productName", "ADIDAS ORIGINAL");
+		return new Object[][] {{map},{map1}};
 	}
+	
+//	@DataProvider
+//	public Object[][] getData() {
+//		return new Object[][] {{"kartikey2@mightcode.com", "Test@123", "ZARA COAT 3"},{"rahulshetty@gmail.com", "Iamking@000", "ADIDAS ORIGINAL"}};
+//	}
+	
 
 }
