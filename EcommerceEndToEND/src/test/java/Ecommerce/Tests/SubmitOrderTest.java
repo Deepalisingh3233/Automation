@@ -2,12 +2,17 @@ package Ecommerce.Tests;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
+
+import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.HashMap;
 import java.util.List;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -60,20 +65,39 @@ public class SubmitOrderTest extends BaseTest{
 		
 	}
 	
-	@DataProvider
-	public Object[][] getData() {
-		
-		HashMap<String, String> map = new HashMap<String, String>();
-		map.put("email", "kartikey2@mightcode.com");
-		map.put("password", "Test@123");
-		map.put("productName", "ZARA COAT 3");
-		
-		HashMap<String, String> map1 = new HashMap<String, String>();
-		map1.put("email", "rahulshetty@gmail.com");
-		map1.put("password", "Iamking@000");
-		map1.put("productName", "ADIDAS ORIGINAL");
-		return new Object[][] {{map},{map1}};
+	public String getScreenshot(String testCaseName) throws IOException {
+		TakesScreenshot ts = (TakesScreenshot)driver;
+		File source = ts.getScreenshotAs(OutputType.FILE);
+		File file = new File(System.getProperty("user.dir") + "//report" + testCaseName + ".png");
+		FileUtils.copyFile(source, file);
+		return System.getProperty("user.dir") + "//report" + testCaseName + ".png";
 	}
+	
+	//Extent Report
+	
+	@DataProvider
+	public Object[][] getData() throws IOException {
+		
+		List<HashMap<String, String>> data = getJsonDataToMap((System.getProperty("user.dir")) + "/src/test/java/Ecommerce/Data/PurchaseOrder.json");
+		return new Object[][] {{data.get(0)},{data.get(1)}};
+
+	}
+	
+	
+//	@DataProvider
+//	public Object[][] getData() {
+//		
+//		HashMap<String, String> map = new HashMap<String, String>();
+//		map.put("email", "kartikey2@mightcode.com");
+//		map.put("password", "Test@123");
+//		map.put("productName", "ZARA COAT 3");
+//		
+//		HashMap<String, String> map1 = new HashMap<String, String>();
+//		map1.put("email", "rahulshetty@gmail.com");
+//		map1.put("password", "Iamking@000");
+//		map1.put("productName", "ADIDAS ORIGINAL");
+//		return new Object[][] {{map},{map1}};
+//	}
 	
 //	@DataProvider
 //	public Object[][] getData() {

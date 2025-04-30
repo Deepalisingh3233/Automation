@@ -11,7 +11,7 @@
       <class name="Ecommerce.Tests.SubmitOrderTest">
         <methods>
           <include name="launchApplication"/>
-          <include name="SubmitOrder" invocation-numbers="1"/>
+          <include name="SubmitOrder" invocation-numbers="0 1"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- Ecommerce.Tests.SubmitOrderTest -->
