@@ -29,12 +29,13 @@ import Ecommerce.PageObjects.LandingPage;
 import Ecommerce.PageObjects.OrderPage;
 import Ecommerce.PageObjects.ProductCatalogue;
 import Ecommerce.TestComponents.BaseTest;
+import Ecommerce.TestComponents.Retry;
 
 public class SubmitOrderTest extends BaseTest{
 
 	String productName = "ZARA COAT 3";
 
-	@Test(dataProvider = "getData", groups = {"Purchase"})
+	@Test(dataProvider = "getData", groups = {"Purchase"},  retryAnalyzer = Retry.class)
 	public void SubmitOrder(HashMap<String, String> input) throws IOException, InterruptedException{
 		// TODO Auto-generated method stub
 		//WebDriverManager.chromedriver.setup(); download chromedriver in your system
@@ -54,7 +55,7 @@ public class SubmitOrderTest extends BaseTest{
 		
 
 		String confirmMessage = confirmationPage.getConfirmationMesssage();
-		AssertJUnit.assertTrue(confirmMessage.equalsIgnoreCase("THANKYOU FOR THE ORDER."));
+		Assert.assertTrue(confirmMessage.equalsIgnoreCase("THANKYOU FOR THE ORDER."));
 	}
 	
 	@Test(dependsOnMethods = {"SubmitOrder"})
@@ -64,14 +65,7 @@ public class SubmitOrderTest extends BaseTest{
 		Assert.assertTrue(orderPage.verifyOrderDisplay(productName));
 		
 	}
-	
-	public String getScreenshot(String testCaseName) throws IOException {
-		TakesScreenshot ts = (TakesScreenshot)driver;
-		File source = ts.getScreenshotAs(OutputType.FILE);
-		File file = new File(System.getProperty("user.dir") + "//report" + testCaseName + ".png");
-		FileUtils.copyFile(source, file);
-		return System.getProperty("user.dir") + "//report" + testCaseName + ".png";
-	}
+
 	
 	//Extent Report
 	

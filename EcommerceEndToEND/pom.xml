@@ -3,8 +3,8 @@
   <groupId>deepalisingh</groupId>
   <artifactId>SeleniumFrameworkDesign</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  
-   <dependencies>
+
+	<dependencies>
 		<!--
 		https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 		<dependency>
@@ -35,7 +35,76 @@
 			<artifactId>jackson-databind</artifactId>
 			<version>2.19.0</version>
 		</dependency>
-   </dependencies>
+
+		<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+		<dependency>
+			<groupId>com.aventstack</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>5.1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>CLUTCH</groupId>
+			<artifactId>DataScrapping</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
+
+
+	<profiles>
+		<profile>
+			<id>Regression</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<version>3.5.3</version>
+						<configuration>
+							<suiteXmlFiles>
+								<suiteXmlFile>TestSuites/testng.xml</suiteXmlFile>
+							</suiteXmlFiles>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		
+		<profile>
+			<id>PurchaseOrder</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<version>3.5.3</version>
+						<configuration>
+							<suiteXmlFiles>
+								<suiteXmlFile>TestSuites/Purchase.xml</suiteXmlFile>
+							</suiteXmlFiles>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		
+		<profile>
+			<id>ErrorValidation</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<version>3.5.3</version>
+						<configuration>
+							<suiteXmlFiles>
+								<suiteXmlFile>TestSuites/ErrorValidationTests.xml</suiteXmlFile>
+							</suiteXmlFiles>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
 
 
 </project>

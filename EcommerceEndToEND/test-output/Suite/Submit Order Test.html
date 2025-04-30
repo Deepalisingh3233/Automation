@@ -55,13 +55,13 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Submit Order Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/2/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/1</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Apr 30 11:57:55 IST 2025</td>
+<td>Started on:</td><td>Wed Apr 30 19:22:37 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>17 seconds (17172 ms)</td>
+<tr><td>Total time:</td><td>6 seconds (6347 ms)</td>
 </tr><tr>
-<td>Included groups:</td><td>Purchase </td>
+<td>Included groups:</td><td></td>
 </tr><tr>
 <td>Excluded groups:</td><td></td>
 </tr>
@@ -77,13 +77,15 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='Ecommerce.Tests.SubmitOrderTest.tearDown()'><b>tearDown</b><br>Test class: Ecommerce.Tests.SubmitOrderTest</td>
-<td><div><pre>org.openqa.selenium.NoSuchSessionException: invalid session id
+<td><div><pre>org.openqa.selenium.NoSuchSessionException: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=135.0.7049.52)
 Build info: version: &apos;4.29.0&apos;, revision: &apos;5fc1ec94cb&apos;
 System info: os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.15.0-136-generic&apos;, java.version: &apos;17.0.14&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [375d28771d2fdc20267d54cf9c3a4381, close {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.52, chrome: {chromedriverVersion: 135.0.7049.114 (63fd8a7d9d0..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:40575}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:40575/devtoo..., se:cdpVersion: 135.0.7049.52, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 375d28771d2fdc20267d54cf9c3a4381
+Command: [c8f21d6f6b0aa0ff8342fc27ec543c63, close {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.52, chrome: {chromedriverVersion: 135.0.7049.114 (63fd8a7d9d0..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:45329}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:45329/devtoo..., se:cdpVersion: 135.0.7049.52, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c8f21d6f6b0aa0ff8342fc27ec543c63
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -94,20 +96,22 @@ Session ID: 375d28771d2fdc20267d54cf9c3a4381
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
 	at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:418)
-	at Ecommerce.TestComponents.BaseTest.tearDown(BaseTest.java:79)
+	at Ecommerce.TestComponents.BaseTest.tearDown(BaseTest.java:90)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:840)
-... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace199611149", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace199611149'><pre>org.openqa.selenium.NoSuchSessionException: invalid session id
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace865372838", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace865372838'><pre>org.openqa.selenium.NoSuchSessionException: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=135.0.7049.52)
 Build info: version: &apos;4.29.0&apos;, revision: &apos;5fc1ec94cb&apos;
 System info: os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.15.0-136-generic&apos;, java.version: &apos;17.0.14&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [375d28771d2fdc20267d54cf9c3a4381, close {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.52, chrome: {chromedriverVersion: 135.0.7049.114 (63fd8a7d9d0..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:40575}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:40575/devtoo..., se:cdpVersion: 135.0.7049.52, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 375d28771d2fdc20267d54cf9c3a4381
+Command: [c8f21d6f6b0aa0ff8342fc27ec543c63, close {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.52, chrome: {chromedriverVersion: 135.0.7049.114 (63fd8a7d9d0..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:45329}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:45329/devtoo..., se:cdpVersion: 135.0.7049.52, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c8f21d6f6b0aa0ff8342fc27ec543c63
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -123,7 +127,7 @@ Session ID: 375d28771d2fdc20267d54cf9c3a4381
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
 	at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:418)
-	at Ecommerce.TestComponents.BaseTest.tearDown(BaseTest.java:79)
+	at Ecommerce.TestComponents.BaseTest.tearDown(BaseTest.java:90)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -153,10 +157,10 @@ Session ID: 375d28771d2fdc20267d54cf9c3a4381
 	at java.base/java.lang.Thread.run(Thread.java:840)
 </pre></div></td>
 <td>0</td>
-<td>Ecommerce.Tests.SubmitOrderTest@71809907</td></tr>
+<td>Ecommerce.Tests.SubmitOrderTest@4a003cbe</td></tr>
 </table><p>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td><b>Attribute(s)</b></td>
 <td width="30%"><b>Exception</b></td>
@@ -165,15 +169,15 @@ Session ID: 375d28771d2fdc20267d54cf9c3a4381
 </tr>
 <tr>
 <td title='Ecommerce.Tests.SubmitOrderTest.SubmitOrder()'><b>SubmitOrder</b><br>Test class: Ecommerce.Tests.SubmitOrderTest<br>Parameters: {password=Test@123, email=kartikey2@mightcode.com, productName=ZARA COAT 3}</td>
-<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button _ngcontent-vnw-c36=&quot;&quot; type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;...&lt;/button&gt; is not clickable at point (1085, 579). Other element would receive the click: &lt;li _ngcontent-vnw-c36=&quot;&quot; class=&quot;totalRow&quot;&gt;...&lt;/li&gt;
+<td><div><pre>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
   (Session info: chrome=135.0.7049.52)
 Build info: version: &apos;4.29.0&apos;, revision: &apos;5fc1ec94cb&apos;
 System info: os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.15.0-136-generic&apos;, java.version: &apos;17.0.14&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [4130390b23f4a1827b70402798449db5, clickElement {id=f.E2A2CA02F83C8C85025D43A64C8D917F.d.C7C47FA8B14BA7ADCFF433843A544737.e.104}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.52, chrome: {chromedriverVersion: 135.0.7049.114 (63fd8a7d9d0..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:38323}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:38323/devtoo..., se:cdpVersion: 135.0.7049.52, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on linux (4130390b23f4a1827b70402798449db5)] -&gt; css selector: .totalRow button]
-Session ID: 4130390b23f4a1827b70402798449db5
+Command: [c8f21d6f6b0aa0ff8342fc27ec543c63, findElement {using=id, value=login}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.52, chrome: {chromedriverVersion: 135.0.7049.114 (63fd8a7d9d0..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:45329}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:45329/devtoo..., se:cdpVersion: 135.0.7049.52, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c8f21d6f6b0aa0ff8342fc27ec543c63
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -181,116 +185,30 @@ Session ID: 4130390b23f4a1827b70402798449db5
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy14.click(Unknown Source)
-	at Ecommerce.PageObjects.CartPage.goToCheckout(CartPage.java:34)
-	at Ecommerce.Tests.SubmitOrderTest.SubmitOrder(SubmitOrderTest.java:46)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1667595656", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1667595656'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button _ngcontent-vnw-c36=&quot;&quot; type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;...&lt;/button&gt; is not clickable at point (1085, 579). Other element would receive the click: &lt;li _ngcontent-vnw-c36=&quot;&quot; class=&quot;totalRow&quot;&gt;...&lt;/li&gt;
-  (Session info: chrome=135.0.7049.52)
-Build info: version: &apos;4.29.0&apos;, revision: &apos;5fc1ec94cb&apos;
-System info: os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.15.0-136-generic&apos;, java.version: &apos;17.0.14&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [4130390b23f4a1827b70402798449db5, clickElement {id=f.E2A2CA02F83C8C85025D43A64C8D917F.d.C7C47FA8B14BA7ADCFF433843A544737.e.104}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.52, chrome: {chromedriverVersion: 135.0.7049.114 (63fd8a7d9d0..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:38323}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:38323/devtoo..., se:cdpVersion: 135.0.7049.52, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on linux (4130390b23f4a1827b70402798449db5)] -&gt; css selector: .totalRow button]
-Session ID: 4130390b23f4a1827b70402798449db5
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy14.click(Unknown Source)
-	at Ecommerce.PageObjects.CartPage.goToCheckout(CartPage.java:34)
-	at Ecommerce.Tests.SubmitOrderTest.SubmitOrder(SubmitOrderTest.java:46)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:741)
-	at org.testng.TestRunner.run(TestRunner.java:616)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-</pre></div></td>
-<td>3</td>
-<td>Ecommerce.Tests.SubmitOrderTest@71809907</td></tr>
-<tr>
-<td title='Ecommerce.Tests.SubmitOrderTest.SubmitOrder()'><b>SubmitOrder</b><br>Test class: Ecommerce.Tests.SubmitOrderTest<br>Parameters: {password=Iamking@000, email=rahulshetty@gmail.com, productName=ADIDAS ORIGINAL}</td>
-<td><div><pre>org.openqa.selenium.NoSuchSessionException: invalid session id: session deleted as the browser has closed the connection
-from disconnected: unable to send message to renderer
-  (Session info: chrome=135.0.7049.52)
-Build info: version: &apos;4.29.0&apos;, revision: &apos;5fc1ec94cb&apos;
-System info: os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.15.0-136-generic&apos;, java.version: &apos;17.0.14&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [375d28771d2fdc20267d54cf9c3a4381, findElements {using=css selector, value=.cartSection h3}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.52, chrome: {chromedriverVersion: 135.0.7049.114 (63fd8a7d9d0..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:40575}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:40575/devtoo..., se:cdpVersion: 135.0.7049.52, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 375d28771d2fdc20267d54cf9c3a4381
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElements(ElementLocation.java:182)
-	at org.openqa.selenium.remote.ElementLocation.findElements(ElementLocation.java:103)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:381)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:375)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElements(DefaultElementLocator.java:83)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:36)
-	at jdk.proxy2/jdk.proxy2.$Proxy15.stream(Unknown Source)
-	at Ecommerce.PageObjects.CartPage.verifyProductDisplay(CartPage.java:29)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy16.click(Unknown Source)
+	at Ecommerce.PageObjects.LandingPage.loginApplication(LandingPage.java:40)
 	at Ecommerce.Tests.SubmitOrderTest.SubmitOrder(SubmitOrderTest.java:44)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:840)
-... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2108972779", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2108972779'><pre>org.openqa.selenium.NoSuchSessionException: invalid session id: session deleted as the browser has closed the connection
-from disconnected: unable to send message to renderer
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1251980053", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1251980053'><pre>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
   (Session info: chrome=135.0.7049.52)
 Build info: version: &apos;4.29.0&apos;, revision: &apos;5fc1ec94cb&apos;
 System info: os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.15.0-136-generic&apos;, java.version: &apos;17.0.14&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [375d28771d2fdc20267d54cf9c3a4381, findElements {using=css selector, value=.cartSection h3}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.52, chrome: {chromedriverVersion: 135.0.7049.114 (63fd8a7d9d0..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:40575}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:40575/devtoo..., se:cdpVersion: 135.0.7049.52, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 375d28771d2fdc20267d54cf9c3a4381
+Command: [c8f21d6f6b0aa0ff8342fc27ec543c63, findElement {using=id, value=login}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.52, chrome: {chromedriverVersion: 135.0.7049.114 (63fd8a7d9d0..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:45329}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:45329/devtoo..., se:cdpVersion: 135.0.7049.52, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c8f21d6f6b0aa0ff8342fc27ec543c63
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -303,14 +221,14 @@ Session ID: 375d28771d2fdc20267d54cf9c3a4381
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElements(ElementLocation.java:182)
-	at org.openqa.selenium.remote.ElementLocation.findElements(ElementLocation.java:103)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:381)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:375)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElements(DefaultElementLocator.java:83)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:36)
-	at jdk.proxy2/jdk.proxy2.$Proxy15.stream(Unknown Source)
-	at Ecommerce.PageObjects.CartPage.verifyProductDisplay(CartPage.java:29)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy16.click(Unknown Source)
+	at Ecommerce.PageObjects.LandingPage.loginApplication(LandingPage.java:40)
 	at Ecommerce.Tests.SubmitOrderTest.SubmitOrder(SubmitOrderTest.java:44)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
@@ -335,8 +253,8 @@ Session ID: 375d28771d2fdc20267d54cf9c3a4381
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:840)
 </pre></div></td>
-<td>8</td>
-<td>Ecommerce.Tests.SubmitOrderTest@71809907</td></tr>
+<td>0</td>
+<td>Ecommerce.Tests.SubmitOrderTest@4a003cbe</td></tr>
 </table><p>
 </body>
 </html>

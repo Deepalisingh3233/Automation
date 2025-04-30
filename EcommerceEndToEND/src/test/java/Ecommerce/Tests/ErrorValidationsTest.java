@@ -21,6 +21,7 @@ import Ecommerce.PageObjects.ConfirmationPage;
 import Ecommerce.PageObjects.LandingPage;
 import Ecommerce.PageObjects.ProductCatalogue;
 import Ecommerce.TestComponents.BaseTest;
+import Ecommerce.TestComponents.Retry;
 
 public class ErrorValidationsTest extends BaseTest{
 
@@ -28,7 +29,7 @@ public class ErrorValidationsTest extends BaseTest{
 	public void LoginErrorValidation() throws IOException, InterruptedException{
 	
 		landingPage.loginApplication("kartikey2@mightcode.com", "Testw@123");
-		AssertJUnit.assertEquals(landingPage.getErrorMessage() ,"Incorrect email or password.");
+		Assert.assertEquals(landingPage.getErrorMessage() ,"Incorrect email or password.");
 		
 	}
 	
