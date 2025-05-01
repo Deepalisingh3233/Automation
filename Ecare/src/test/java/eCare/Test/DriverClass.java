@@ -4,6 +4,7 @@ import org.testng.annotations.Test;
 import eCare.AbstractComponent.AbstractComponents;
 import eCare.PageObjects.PaymentPage;
 import eCare.PageObjects.BookAppointment;
+import eCare.PageObjects.OPDEMR;
 import eCare.PageObjects.OpdDoctorPage;
 import eCare.PageObjects.Registration;
 import eCare.TestComponents.BaseTest;
@@ -56,6 +57,11 @@ public class DriverClass extends BaseTest{
 		OpdDoctorPage opdDoctorPage = new OpdDoctorPage(driver);
 		opdDoctorPage.searchPatient(uhid);
 		opdDoctorPage.pickAppointment();
+		OPDEMR opdEMR = new OPDEMR(driver);
+		opdEMR.fillHistory();
+		opdEMR.fillComplaints();
+		opdEMR.selectDiagnosis();
+		opdEMR.selectInvestigation();
 	}
 		
 		
