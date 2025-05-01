@@ -1,9 +1,14 @@
 package eCare.AbstractComponent;
 
+import java.time.Duration;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class AbstractComponents {
 	
@@ -45,9 +50,7 @@ public class AbstractComponents {
 		loginButton.click();
 	}
 	
-	public void goTo() {
-		driver.get("https://devui-ecare.mightcode.com/login");
-	}
+	
 	
 	public void selectDob() {
 		calendar.click();
@@ -55,6 +58,11 @@ public class AbstractComponents {
 		year.click();
 		month.click();
 		date.click();
+	}
+	
+	public void waitForElementToAppear(WebElement findBy) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.visibilityOf(findBy));
 	}
 
 }

@@ -19,10 +19,30 @@
 			<version>7.10.2</version>
 			<scope>test</scope>
 		</dependency>
+		
 		<dependency>
 			<groupId>CoreJava</groupId>
 			<artifactId>CoreJava</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>CLUTCH</groupId>
+			<artifactId>DataScrapping</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>deepalisingh</groupId>
+			<artifactId>SeleniumFrameworkDesign</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+		<dependency>
+			<groupId>com.aventstack</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>5.1.2</version>
 		</dependency>
   </dependencies>
 </project>

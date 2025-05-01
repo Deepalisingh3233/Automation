@@ -4,6 +4,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 import eCare.AbstractComponent.AbstractComponents;
 
@@ -13,6 +14,7 @@ public class Registration extends AbstractComponents{
 	public Registration(WebDriver driver) {
 		super(driver);
 		this.driver = driver;
+		PageFactory.initElements(driver, this);
 	}
 
 	@FindBy(css = "[class*='ant-btn-primary']")
@@ -39,12 +41,13 @@ public class Registration extends AbstractComponents{
 	@FindBy(css = ".ant-btn-primary")
 	WebElement saveBtn;
 	
-	public void registration() {
+	public void registration() throws InterruptedException {
 		registrationBtn.click();
+		Thread.sleep(2000);
 		title.sendKeys("Mr", Keys.ENTER);
 		name.sendKeys("Ankush Sharma");
 		email.sendKeys("ankushsharma@mightcode.com");
-		number.sendKeys("9856968574");
+		number.sendKeys("9856988574");
 		selectDob();
 		houseNumber.sendKeys("187-B Agile Heights");
 		pincode.sendKeys("208022");
