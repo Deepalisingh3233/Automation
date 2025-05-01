@@ -4,6 +4,7 @@ import org.testng.annotations.Test;
 import eCare.AbstractComponent.AbstractComponents;
 import eCare.PageObjects.PaymentPage;
 import eCare.PageObjects.BookAppointment;
+import eCare.PageObjects.OpdDoctorPage;
 import eCare.PageObjects.Registration;
 import eCare.TestComponents.BaseTest;
 
@@ -12,7 +13,7 @@ public class DriverClass extends BaseTest{
 //	String uhid;
 	String uhid = "000004700";
 
-	@Test
+//	@Test
 	public void Registration() throws InterruptedException 
 		{
 			AbstractComponents loginPage = new AbstractComponents(driver);
@@ -28,7 +29,7 @@ public class DriverClass extends BaseTest{
 			paymentPage.cancelInvoice();
 		}
 	
-	@Test(dependsOnMethods = "Login")
+//	@Test(dependsOnMethods = "Login")
 //	@Test
 	public void BookAppointment() throws InterruptedException {
 		AbstractComponents loginPage = new AbstractComponents(driver);
@@ -49,9 +50,12 @@ public class DriverClass extends BaseTest{
 	}
 	
 	@Test
-	public void OpdDoctorFlow() {
+	public void OpdDoctorFlow() throws InterruptedException {
 		AbstractComponents loginPage = new AbstractComponents(driver);
-		loginPage.loginWithValidCredentials("patel", "Patel@123");
+		loginPage.loginWithValidCredentials("patel", "Patel@12345");
+		OpdDoctorPage opdDoctorPage = new OpdDoctorPage(driver);
+		opdDoctorPage.searchPatient(uhid);
+		opdDoctorPage.pickAppointment();
 	}
 		
 		
