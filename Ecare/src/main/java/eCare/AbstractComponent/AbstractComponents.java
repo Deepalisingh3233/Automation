@@ -68,5 +68,9 @@ public class AbstractComponents {
 		wait.until(ExpectedConditions.visibilityOf(findBy));
 	}
 	
+	public void waitForPageLoad() {
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
+	}
+	
 
 }
