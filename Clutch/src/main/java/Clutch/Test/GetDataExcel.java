@@ -25,7 +25,8 @@ public class GetDataExcel {
         WebDriver driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-        driver.get("https://clutch.co/us/developers/information-technology-industry");
+//        driver.get("https://clutch.co/us/developers/information-technology-industry");
+        driver.get("https://clutch.co/developers/information-technology-industry?geona_id=40823");
 
         // Create a Workbook and a Sheet
         Workbook workbook = new XSSFWorkbook();

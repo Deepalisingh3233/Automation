@@ -3,6 +3,7 @@ package eCare.Test;
 import org.testng.annotations.Test;
 import eCare.AbstractComponent.AbstractComponents;
 import eCare.PageObjects.PaymentPage;
+import eCare.PageObjects.Prescription;
 import eCare.PageObjects.BookAppointment;
 import eCare.PageObjects.OPDEMR;
 import eCare.PageObjects.OpdDoctorPage;
@@ -12,10 +13,10 @@ import eCare.TestComponents.BaseTest;
 
 public class DriverClass extends BaseTest{
 
-//	String uhid;
-	String uhid = "000004700";
+	String uhid;
+//	String uhid = "000004710";
 
-//	@Test
+	@Test(priority = 1)
 	public void Registration() throws InterruptedException 
 		{
 			AbstractComponents loginPage = new AbstractComponents(driver);
@@ -31,7 +32,7 @@ public class DriverClass extends BaseTest{
 			paymentPage.cancelInvoice();
 		}
 	
-//	@Test(dependsOnMethods = "Login")
+	@Test(dependsOnMethods = "Registration", priority = 2)
 //	@Test
 	public void BookAppointment() throws InterruptedException {
 		AbstractComponents loginPage = new AbstractComponents(driver);
@@ -51,18 +52,24 @@ public class DriverClass extends BaseTest{
 		
 	}
 	
-	@Test
+	@Test(priority = 3)
 	public void OpdDoctorFlow() throws InterruptedException {
 		AbstractComponents loginPage = new AbstractComponents(driver);
 		loginPage.loginWithValidCredentials("patel", "Patel@12345");
 		OpdDoctorPage opdDoctorPage = new OpdDoctorPage(driver);
 		opdDoctorPage.searchPatient(uhid);
+		Thread.sleep(1000);
 		opdDoctorPage.pickAppointment();
 		Vitals vitals = new Vitals(driver);
 		vitals.opdVitals();
 		OPDEMR opdEMR = new OPDEMR(driver);
 		opdEMR.fillEMR();
-		
+		Prescription prescription =  new Prescription(driver);
+		prescription.fillPrescription();
+		opdDoctorPage.searchPatient(uhid);
+		Thread.sleep(1000);
+		opdDoctorPage.completeAppointment();
+		opdDoctorPage.clickYesPopup();
 	}
 		
 		

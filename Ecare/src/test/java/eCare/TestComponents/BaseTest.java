@@ -45,7 +45,7 @@ public class BaseTest {
 		landingPage.goTo();
 	}
 
-	//@AfterMethod(alwaysRun = true)
+//	@AfterMethod(alwaysRun = true)
 	public void tearDown() {
 		driver.close();
 	}
