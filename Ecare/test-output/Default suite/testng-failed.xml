@@ -5,6 +5,7 @@
     <classes>
       <class name="eCare.Test.DriverClass">
         <methods>
+          <include name="tearDown"/>
           <include name="launchApplication"/>
           <include name="OpdDoctorFlow"/>
         </methods>

@@ -8,9 +8,12 @@
     <classes>
       <class name="eCare.Test.DriverClass">
         <methods>
+          <include name="Registration"/>
           <include name="launchApplication"/>
+          <include name="OpdDoctorFlow"/>
+          <include name="OpdLabBooking"/>
           <include name="BookAppointment"/>
-          <include name="Login"/>
+          <include name="OpdPharmacyBooking"/>
         </methods>
       </class> <!-- eCare.Test.DriverClass -->
     </classes>

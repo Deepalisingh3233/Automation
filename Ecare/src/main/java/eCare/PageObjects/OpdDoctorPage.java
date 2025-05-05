@@ -26,7 +26,8 @@ public class OpdDoctorPage extends AbstractComponents{
 	@FindBy(css = "tbody td:nth-child(7) div span:nth-child(2)")
 	WebElement completeApoint;
 	
-	@FindBy(css = ".ant-modal-footer button:nth-child(2)")
+//	@FindBy(css = ".ant-modal-footer button:nth-child(2)")
+	@FindBy(xpath = "//div[@class='ant-modal-footer']/button[2]")
 	WebElement yesPopup;
 	
 	public void searchPatient(String uhid) {
@@ -42,8 +43,8 @@ public class OpdDoctorPage extends AbstractComponents{
 	}
 	
 	public void clickYesPopup() {
-		waitForElementToAppear(yesPopup);
 		yesPopup.click();
+		System.out.println("Appointment completed successfully!");
 	}
 
 	

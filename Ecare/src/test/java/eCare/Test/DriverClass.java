@@ -7,6 +7,8 @@ import eCare.PageObjects.Prescription;
 import eCare.PageObjects.BookAppointment;
 import eCare.PageObjects.OPDEMR;
 import eCare.PageObjects.OpdDoctorPage;
+import eCare.PageObjects.OpdLab;
+import eCare.PageObjects.OpdPharmacy;
 import eCare.PageObjects.Registration;
 import eCare.PageObjects.Vitals;
 import eCare.TestComponents.BaseTest;
@@ -14,7 +16,7 @@ import eCare.TestComponents.BaseTest;
 public class DriverClass extends BaseTest{
 
 	String uhid;
-//	String uhid = "000004710";
+//	String uhid = "000004717";
 
 	@Test(priority = 1)
 	public void Registration() throws InterruptedException 
@@ -69,9 +71,25 @@ public class DriverClass extends BaseTest{
 		opdDoctorPage.searchPatient(uhid);
 		Thread.sleep(1000);
 		opdDoctorPage.completeAppointment();
+		Thread.sleep(2000);
 		opdDoctorPage.clickYesPopup();
 	}
 		
+	@Test(priority = 4)
+	public void OpdLabBooking() throws InterruptedException {
+		AbstractComponents loginPage = new AbstractComponents(driver);
+		loginPage.loginWithValidCredentials("105", "Unicode@2022$");
+		OpdLab opdLab = new OpdLab(driver);
+		opdLab.opdLabBooking(uhid);
+	}
+	
+	@Test(priority = 5)
+	public void OpdPharmacyBooking() throws InterruptedException {
+		AbstractComponents loginPage = new AbstractComponents(driver);
+		loginPage.loginWithValidCredentials("290", "Test@123");
+		OpdPharmacy opdPharmacy = new OpdPharmacy(driver);
+		opdPharmacy.opdPrescriptionBooking(uhid);
 		
+	}
 	
 }

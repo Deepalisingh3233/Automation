@@ -64,9 +64,15 @@ public class AbstractComponents {
 	}
 	
 	public void waitForElementToAppear(WebElement findBy) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		wait.until(ExpectedConditions.visibilityOf(findBy));
 	}
+	
+	public boolean waitForElementEnabled(WebElement findBy) {
+		return findBy.isEnabled();
+		
+	}
+	
 	
 	public void waitForPageLoad() {
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
