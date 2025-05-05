@@ -1,5 +1,7 @@
 package eCare.Test;
 
+import java.io.IOException;
+
 import org.testng.annotations.Test;
 import eCare.AbstractComponent.AbstractComponents;
 import eCare.PageObjects.PaymentPage;
@@ -19,7 +21,7 @@ public class DriverClass extends BaseTest{
 //	String uhid = "000004717";
 
 	@Test(priority = 1)
-	public void Registration() throws InterruptedException 
+	public void Registration() throws InterruptedException, IOException 
 		{
 			AbstractComponents loginPage = new AbstractComponents(driver);
 			loginPage.loginWithValidCredentials("105", "Unicode@2022$");
@@ -36,7 +38,7 @@ public class DriverClass extends BaseTest{
 	
 	@Test(dependsOnMethods = "Registration", priority = 2)
 //	@Test
-	public void BookAppointment() throws InterruptedException {
+	public void BookAppointment() throws InterruptedException, IOException {
 		AbstractComponents loginPage = new AbstractComponents(driver);
 		loginPage.loginWithValidCredentials("105", "Unicode@2022$");
 		BookAppointment bookAppointment = new BookAppointment(driver);
@@ -76,7 +78,7 @@ public class DriverClass extends BaseTest{
 	}
 		
 	@Test(priority = 4)
-	public void OpdLabBooking() throws InterruptedException {
+	public void OpdLabBooking() throws InterruptedException, IOException {
 		AbstractComponents loginPage = new AbstractComponents(driver);
 		loginPage.loginWithValidCredentials("105", "Unicode@2022$");
 		OpdLab opdLab = new OpdLab(driver);
@@ -84,7 +86,7 @@ public class DriverClass extends BaseTest{
 	}
 	
 	@Test(priority = 5)
-	public void OpdPharmacyBooking() throws InterruptedException {
+	public void OpdPharmacyBooking() throws InterruptedException, IOException {
 		AbstractComponents loginPage = new AbstractComponents(driver);
 		loginPage.loginWithValidCredentials("290", "Test@123");
 		OpdPharmacy opdPharmacy = new OpdPharmacy(driver);

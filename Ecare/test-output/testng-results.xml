@@ -2,48 +2,48 @@
 <testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-05-05T14:44:01 IST" name="Suite" finished-at="2025-05-05T14:45:53 IST" duration-ms="112154">
+  <suite started-at="2025-05-05T15:15:42 IST" name="Suite" finished-at="2025-05-05T15:17:33 IST" duration-ms="110429">
     <groups>
     </groups>
-    <test started-at="2025-05-05T14:44:01 IST" name="Book Appointment" finished-at="2025-05-05T14:45:53 IST" duration-ms="112154">
+    <test started-at="2025-05-05T15:15:42 IST" name="Book Appointment" finished-at="2025-05-05T15:17:33 IST" duration-ms="110429">
       <class name="eCare.Test.DriverClass">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:eCare.Test.DriverClass@5890e879]" started-at="2025-05-05T14:44:01 IST" name="launchApplication" finished-at="2025-05-05T14:44:03 IST" duration-ms="2316" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:eCare.Test.DriverClass@5890e879]" started-at="2025-05-05T15:15:42 IST" name="launchApplication" finished-at="2025-05-05T15:15:44 IST" duration-ms="2200" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="Registration()[pri:1, instance:eCare.Test.DriverClass@5890e879]" started-at="2025-05-05T14:44:03 IST" name="Registration" finished-at="2025-05-05T14:44:15 IST" duration-ms="11662" status="PASS">
+        <test-method signature="Registration()[pri:1, instance:eCare.Test.DriverClass@5890e879]" started-at="2025-05-05T15:15:44 IST" name="Registration" finished-at="2025-05-05T15:15:56 IST" duration-ms="11822" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Registration -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:eCare.Test.DriverClass@5890e879]" started-at="2025-05-05T14:44:15 IST" name="launchApplication" finished-at="2025-05-05T14:44:17 IST" duration-ms="1814" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:eCare.Test.DriverClass@5890e879]" started-at="2025-05-05T15:15:56 IST" name="launchApplication" finished-at="2025-05-05T15:15:58 IST" duration-ms="1905" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="BookAppointment()[pri:2, instance:eCare.Test.DriverClass@5890e879]" started-at="2025-05-05T14:44:17 IST" name="BookAppointment" finished-at="2025-05-05T14:44:31 IST" depends-on-methods="eCare.Test.DriverClass.Registration" duration-ms="14734" status="PASS">
+        <test-method signature="BookAppointment()[pri:2, instance:eCare.Test.DriverClass@5890e879]" started-at="2025-05-05T15:15:58 IST" name="BookAppointment" finished-at="2025-05-05T15:16:13 IST" depends-on-methods="eCare.Test.DriverClass.Registration" duration-ms="14683" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BookAppointment -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:eCare.Test.DriverClass@5890e879]" started-at="2025-05-05T14:44:31 IST" name="launchApplication" finished-at="2025-05-05T14:44:33 IST" duration-ms="1827" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:eCare.Test.DriverClass@5890e879]" started-at="2025-05-05T15:16:13 IST" name="launchApplication" finished-at="2025-05-05T15:16:15 IST" duration-ms="1969" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="OpdDoctorFlow()[pri:3, instance:eCare.Test.DriverClass@5890e879]" started-at="2025-05-05T14:44:33 IST" name="OpdDoctorFlow" finished-at="2025-05-05T14:45:19 IST" duration-ms="45362" status="PASS">
+        <test-method signature="OpdDoctorFlow()[pri:3, instance:eCare.Test.DriverClass@5890e879]" started-at="2025-05-05T15:16:15 IST" name="OpdDoctorFlow" finished-at="2025-05-05T15:16:57 IST" duration-ms="42183" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OpdDoctorFlow -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:eCare.Test.DriverClass@5890e879]" started-at="2025-05-05T14:45:19 IST" name="launchApplication" finished-at="2025-05-05T14:45:21 IST" duration-ms="1927" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:eCare.Test.DriverClass@5890e879]" started-at="2025-05-05T15:16:57 IST" name="launchApplication" finished-at="2025-05-05T15:17:00 IST" duration-ms="2742" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="OpdLabBooking()[pri:4, instance:eCare.Test.DriverClass@5890e879]" started-at="2025-05-05T14:45:21 IST" name="OpdLabBooking" finished-at="2025-05-05T14:45:34 IST" duration-ms="13558" status="PASS">
+        <test-method signature="OpdLabBooking()[pri:4, instance:eCare.Test.DriverClass@5890e879]" started-at="2025-05-05T15:17:00 IST" name="OpdLabBooking" finished-at="2025-05-05T15:17:13 IST" duration-ms="13594" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OpdLabBooking -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:eCare.Test.DriverClass@5890e879]" started-at="2025-05-05T14:45:34 IST" name="launchApplication" finished-at="2025-05-05T14:45:36 IST" duration-ms="2265" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:eCare.Test.DriverClass@5890e879]" started-at="2025-05-05T15:17:13 IST" name="launchApplication" finished-at="2025-05-05T15:17:17 IST" duration-ms="3692" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="OpdPharmacyBooking()[pri:5, instance:eCare.Test.DriverClass@5890e879]" started-at="2025-05-05T14:45:36 IST" name="OpdPharmacyBooking" finished-at="2025-05-05T14:45:53 IST" duration-ms="16633" status="PASS">
+        <test-method signature="OpdPharmacyBooking()[pri:5, instance:eCare.Test.DriverClass@5890e879]" started-at="2025-05-05T15:17:17 IST" name="OpdPharmacyBooking" finished-at="2025-05-05T15:17:33 IST" duration-ms="15583" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OpdPharmacyBooking -->

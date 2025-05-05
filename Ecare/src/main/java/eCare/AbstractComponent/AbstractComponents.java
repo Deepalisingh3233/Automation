@@ -1,10 +1,15 @@
 package eCare.AbstractComponent;
 
+import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -73,6 +78,10 @@ public class AbstractComponents {
 		
 	}
 	
+	public void getSS() throws IOException {
+		File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+	    FileUtils.copyFile(src, new File(System.getProperty("user.dir") + "//Screenshot" + "invoice.png"));
+	}
 	
 	public void waitForPageLoad() {
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));

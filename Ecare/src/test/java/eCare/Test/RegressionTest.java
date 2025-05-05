@@ -1,5 +1,7 @@
 package eCare.Test;
 
+import java.io.IOException;
+
 import org.testng.annotations.Test;
 
 import eCare.AbstractComponent.AbstractComponents;
@@ -13,7 +15,7 @@ public class RegressionTest extends BaseTest{
 	String uhid;
 
 	@Test
-	public void Regression() throws InterruptedException {
+	public void Regression() throws InterruptedException, IOException {
 		AbstractComponents loginPage = new AbstractComponents(driver);
 		loginPage.loginWithValidCredentials("105", "Unicode@2022$");
 			

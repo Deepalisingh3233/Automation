@@ -1,5 +1,7 @@
 package eCare.PageObjects;
 
+import java.io.IOException;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -38,7 +40,7 @@ public class OpdPharmacy extends AbstractComponents{
 		proceedBtn.click();
 	}
 	
-	public void opdPrescriptionBooking(String uhid) throws InterruptedException {
+	public void opdPrescriptionBooking(String uhid) throws InterruptedException, IOException {
 		search(uhid);
 		Thread.sleep(2000);
 		clickAccept();

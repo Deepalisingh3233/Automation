@@ -1,5 +1,6 @@
 package eCare.PageObjects;
 
+import java.io.IOException;
 import java.util.List;
 
 import org.openqa.selenium.WebDriver;
@@ -53,7 +54,7 @@ public class OpdLab extends AbstractComponents{
 		confirmBtn.click();
 	}
 	
-	public void opdLabBooking(String uhid) throws InterruptedException {
+	public void opdLabBooking(String uhid) throws InterruptedException, IOException {
 		clickLabMenu();
 		search(uhid);
 		clickBookTestBtn();

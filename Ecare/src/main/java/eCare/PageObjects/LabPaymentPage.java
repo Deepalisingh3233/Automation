@@ -1,5 +1,7 @@
 package eCare.PageObjects;
 
+import java.io.IOException;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -42,7 +44,8 @@ public class LabPaymentPage extends AbstractComponents{
 		proceedBtn.click();
 	}
 	
-	public void generateInvoice() {
+	public void generateInvoice() throws IOException {
+		getSS();
 		waitForElementToAppear(generateInvoiceBtn);
 		generateInvoiceBtn.click();
 	}
