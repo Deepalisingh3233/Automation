@@ -1,20 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="8" total="9" passed="1" failed="0" skipped="0">
+<testng-results ignored="8" total="9" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-05-07T15:46:58 IST" name="Suite" finished-at="2025-05-07T15:47:11 IST" duration-ms="12816">
+  <suite started-at="2025-05-07T18:54:06 IST" name="Suite" finished-at="2025-05-07T18:54:09 IST" duration-ms="3329">
     <groups>
     </groups>
-    <test started-at="2025-05-07T15:46:58 IST" name="Book Appointment" finished-at="2025-05-07T15:47:11 IST" duration-ms="12816">
+    <test started-at="2025-05-07T18:54:06 IST" name="Book Appointment" finished-at="2025-05-07T18:54:09 IST" duration-ms="3329">
       <class name="eCare.Test.DriverClass">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:eCare.Test.DriverClass@3e08ff24]" started-at="2025-05-07T15:46:58 IST" name="launchApplication" finished-at="2025-05-07T15:47:00 IST" duration-ms="2064" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:eCare.Test.DriverClass@3e08ff24]" started-at="2025-05-07T18:54:06 IST" name="launchApplication" finished-at="2025-05-07T18:54:09 IST" duration-ms="3046" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="Pathologist()[pri:9, instance:eCare.Test.DriverClass@3e08ff24]" started-at="2025-05-07T15:47:00 IST" name="Pathologist" finished-at="2025-05-07T15:47:11 IST" duration-ms="10716" status="PASS">
+        <test-method signature="OpdLabFO()[pri:6, instance:eCare.Test.DriverClass@3e08ff24]" started-at="2025-05-07T18:54:09 IST" name="OpdLabFO" finished-at="2025-05-07T18:54:09 IST" duration-ms="20" status="FAIL">
+          <exception class="java.lang.Error">
+            <message>
+              <![CDATA[Unresolved compilation problem: 
+The method logout() is undefined for the type DriverClass
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Error: Unresolved compilation problem: 
+The method logout() is undefined for the type DriverClass
+
+at eCare.Test.DriverClass.OpdLabFO(DriverClass.java:92)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Error -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Pathologist -->
+        </test-method> <!-- OpdLabFO -->
       </class> <!-- eCare.Test.DriverClass -->
     </test> <!-- Book Appointment -->
   </suite> <!-- Suite -->

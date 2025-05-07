@@ -47,6 +47,12 @@ public class AbstractComponents {
 	@FindBy(xpath = "//td[@title='2019-04-08']")
 	WebElement date;
 	
+	@FindBy(css = ".ant-layout-header div:nth-child(6) span")
+	WebElement logoutDropdown;
+	
+	@FindBy(css = ".ant-dropdown-menu-item:nth-child(4)")
+	WebElement signout;
+	
 	public AbstractComponents(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
@@ -59,7 +65,12 @@ public class AbstractComponents {
 		loginButton.click();
 	}
 	
-	
+	public void logout() {
+		waitForElementToClickable(logoutDropdown);
+		logoutDropdown.click();
+		waitForElementToAppear(signout);
+		signout.click();
+	}
 	
 	public void selectDob() {
 		calendar.click();

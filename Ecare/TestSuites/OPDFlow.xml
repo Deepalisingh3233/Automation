@@ -7,7 +7,7 @@
 		<listener class-name="eCare.TestComponents.Listeners" />
 	</listeners>
 
-	<test thread-count="5" name="Book Appointment">
+	<test thread-count="5" name="Complete OPD Flow">
 		<classes>
 			<class name="eCare.Test.DriverClass"/>
 		</classes>

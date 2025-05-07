@@ -10,7 +10,7 @@ import eCare.TestComponents.BaseTest;
 public class DriverClass extends BaseTest{
 
 //	String uhid;
-	String uhid = "000004715";
+	String uhid = "000004729";
 
 	@Test(priority = 1)
 	public void Registration() throws InterruptedException, IOException 
@@ -69,7 +69,7 @@ public class DriverClass extends BaseTest{
 		opdDoctorPage.clickYesPopup();
 	}
 		
-	@Test(priority = 4)
+	@Test(priority = 5)
 	public void OpdLabBooking() throws InterruptedException, IOException {
 		AbstractComponents loginPage = new AbstractComponents(driver);
 		loginPage.loginWithValidCredentials("105", "Unicode@2022$");
@@ -77,7 +77,7 @@ public class DriverClass extends BaseTest{
 		opdLab.opdLabBooking(uhid);
 	}
 	
-	@Test(priority = 5)
+	@Test(priority = 4)
 	public void OpdPharmacyBooking() throws InterruptedException, IOException {
 		AbstractComponents loginPage = new AbstractComponents(driver);
 		loginPage.loginWithValidCredentials("290", "Test@123");
@@ -89,6 +89,7 @@ public class DriverClass extends BaseTest{
 	public void OpdLabFO() throws InterruptedException {
 		AbstractComponents loginPage = new AbstractComponents(driver);
 		loginPage.loginWithValidCredentials("502", "Test@123");
+		loginPage.logout();
 		OpdLabFO opdLabFO = new OpdLabFO(driver);
 		opdLabFO.selectPhlebotomist(uhid);
 	}

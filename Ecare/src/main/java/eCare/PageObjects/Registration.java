@@ -45,9 +45,9 @@ public class Registration extends AbstractComponents{
 		registrationBtn.click();
 		Thread.sleep(2000);
 		title.sendKeys("Mr", Keys.ENTER);
-		name.sendKeys("Ankush Singh");
+		name.sendKeys("Ankush Singh QA");
 		email.sendKeys("ankushsharma@mightcode.com");
-		number.sendKeys("9856211174");
+		number.sendKeys("9856201174");
 		selectDob();
 		houseNumber.sendKeys("187-B Agile Heights");
 		pincode.sendKeys("208022");

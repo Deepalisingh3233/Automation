@@ -11,7 +11,7 @@
 		<classes>
 			<class name="eCare.Test.DriverClass">
 			<methods>
-				<include name="Pathologist"></include>
+				<include name="OpdLabFO"></include>
 			</methods>
 			</class>
 		</classes>
