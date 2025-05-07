@@ -45,12 +45,13 @@ public class Registration extends AbstractComponents{
 		registrationBtn.click();
 		Thread.sleep(2000);
 		title.sendKeys("Mr", Keys.ENTER);
-		name.sendKeys("Ankush Sharma");
+		name.sendKeys("Ankush Singh");
 		email.sendKeys("ankushsharma@mightcode.com");
-		number.sendKeys("9856218574");
+		number.sendKeys("9856211174");
 		selectDob();
 		houseNumber.sendKeys("187-B Agile Heights");
 		pincode.sendKeys("208022");
+		Thread.sleep(1000);
 		saveBtn.click();
 		
 	}

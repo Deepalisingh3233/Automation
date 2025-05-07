@@ -57,6 +57,7 @@ public class OpdLab extends AbstractComponents{
 	public void opdLabBooking(String uhid) throws InterruptedException, IOException {
 		clickLabMenu();
 		search(uhid);
+		Thread.sleep(2000);
 		clickBookTestBtn();
 		clickCheckbox();
 		clickConfirmBtn();

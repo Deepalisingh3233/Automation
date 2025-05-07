@@ -4,21 +4,13 @@ import java.io.IOException;
 
 import org.testng.annotations.Test;
 import eCare.AbstractComponent.AbstractComponents;
-import eCare.PageObjects.PaymentPage;
-import eCare.PageObjects.Prescription;
-import eCare.PageObjects.BookAppointment;
-import eCare.PageObjects.OPDEMR;
-import eCare.PageObjects.OpdDoctorPage;
-import eCare.PageObjects.OpdLab;
-import eCare.PageObjects.OpdPharmacy;
-import eCare.PageObjects.Registration;
-import eCare.PageObjects.Vitals;
+import eCare.PageObjects.*;
 import eCare.TestComponents.BaseTest;
 
 public class DriverClass extends BaseTest{
 
-	String uhid;
-//	String uhid = "000004717";
+//	String uhid;
+	String uhid = "000004715";
 
 	@Test(priority = 1)
 	public void Registration() throws InterruptedException, IOException 
@@ -91,7 +83,41 @@ public class DriverClass extends BaseTest{
 		loginPage.loginWithValidCredentials("290", "Test@123");
 		OpdPharmacy opdPharmacy = new OpdPharmacy(driver);
 		opdPharmacy.opdPrescriptionBooking(uhid);
-		
 	}
 	
+	@Test(priority = 6)
+	public void OpdLabFO() throws InterruptedException {
+		AbstractComponents loginPage = new AbstractComponents(driver);
+		loginPage.loginWithValidCredentials("502", "Test@123");
+		OpdLabFO opdLabFO = new OpdLabFO(driver);
+		opdLabFO.selectPhlebotomist(uhid);
+	}
+	
+	@Test(priority = 7)
+	public void OpdLabPhlebotomist() throws InterruptedException {
+		AbstractComponents loginPage = new AbstractComponents(driver);
+		loginPage.loginWithValidCredentials("504", "Test@123");
+		OpdPhlebotomistPage opdPhlebotomistPage = new OpdPhlebotomistPage(driver);
+		opdPhlebotomistPage.selectSample(uhid);
+	}
+	
+	@Test(priority = 8)
+	public void OpdLabTechnician() throws InterruptedException {
+		AbstractComponents loginPage = new AbstractComponents(driver);
+		loginPage.loginWithValidCredentials("175", "Test@123");
+		OpdLabTechnicianPage opdLabTechnicianPage = new OpdLabTechnicianPage(driver);
+		opdLabTechnicianPage.search(uhid);
+		opdLabTechnicianPage.clickPatientName();
+		opdLabTechnicianPage.clickAddReport();
+		opdLabTechnicianPage.clickApproveCheckboxes();
+		opdLabTechnicianPage.clickSendBtn();
+	}
+	
+	@Test(priority = 9)
+	public void Pathologist() throws InterruptedException {
+		AbstractComponents loginPage = new AbstractComponents(driver);
+		loginPage.loginWithValidCredentials("506", "Test@123");
+		PathologistPage pathologistPage = new PathologistPage(driver);
+		pathologistPage.reportApproved(uhid);
+	}
 }

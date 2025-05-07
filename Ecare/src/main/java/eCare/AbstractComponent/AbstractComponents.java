@@ -3,6 +3,7 @@ package eCare.AbstractComponent;
 import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
+import java.util.concurrent.TimeoutException;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Alert;
@@ -73,6 +74,11 @@ public class AbstractComponents {
 		wait.until(ExpectedConditions.visibilityOf(findBy));
 	}
 	
+	public void waitForElementToClickable(WebElement findBy) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.elementToBeClickable(findBy));
+	}
+	
 	public boolean waitForElementEnabled(WebElement findBy) {
 		return findBy.isEnabled();
 		
@@ -86,6 +92,7 @@ public class AbstractComponents {
 	public void waitForPageLoad() {
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
 	}
+	
 	
 
 }
