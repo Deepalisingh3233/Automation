@@ -10,7 +10,9 @@ import eCare.TestComponents.BaseTest;
 public class DriverClass extends BaseTest{
 
 //	String uhid;
-	String uhid = "000004729";
+	String uhid = "000004723";
+
+//	AbstractComponents loginPage = new AbstractComponents(driver);
 
 	@Test(priority = 1)
 	public void Registration() throws InterruptedException, IOException 
@@ -45,7 +47,7 @@ public class DriverClass extends BaseTest{
 		paymentPage.proceed();
 		paymentPage.generateInvoice();
 		paymentPage.cancelInvoice();
-		
+		loginPage.logout();
 	}
 	
 	@Test(priority = 3)
@@ -67,6 +69,7 @@ public class DriverClass extends BaseTest{
 		opdDoctorPage.completeAppointment();
 		Thread.sleep(2000);
 		opdDoctorPage.clickYesPopup();
+		loginPage.logout();
 	}
 		
 	@Test(priority = 5)
@@ -75,6 +78,7 @@ public class DriverClass extends BaseTest{
 		loginPage.loginWithValidCredentials("105", "Unicode@2022$");
 		OpdLab opdLab = new OpdLab(driver);
 		opdLab.opdLabBooking(uhid);
+		loginPage.logout();
 	}
 	
 	@Test(priority = 4)
@@ -83,15 +87,16 @@ public class DriverClass extends BaseTest{
 		loginPage.loginWithValidCredentials("290", "Test@123");
 		OpdPharmacy opdPharmacy = new OpdPharmacy(driver);
 		opdPharmacy.opdPrescriptionBooking(uhid);
+		loginPage.logout();
 	}
 	
 	@Test(priority = 6)
 	public void OpdLabFO() throws InterruptedException {
 		AbstractComponents loginPage = new AbstractComponents(driver);
 		loginPage.loginWithValidCredentials("502", "Test@123");
-		loginPage.logout();
 		OpdLabFO opdLabFO = new OpdLabFO(driver);
 		opdLabFO.selectPhlebotomist(uhid);
+		loginPage.logout();
 	}
 	
 	@Test(priority = 7)
@@ -100,6 +105,7 @@ public class DriverClass extends BaseTest{
 		loginPage.loginWithValidCredentials("504", "Test@123");
 		OpdPhlebotomistPage opdPhlebotomistPage = new OpdPhlebotomistPage(driver);
 		opdPhlebotomistPage.selectSample(uhid);
+		loginPage.logout();
 	}
 	
 	@Test(priority = 8)
@@ -112,6 +118,7 @@ public class DriverClass extends BaseTest{
 		opdLabTechnicianPage.clickAddReport();
 		opdLabTechnicianPage.clickApproveCheckboxes();
 		opdLabTechnicianPage.clickSendBtn();
+		loginPage.logout();
 	}
 	
 	@Test(priority = 9)
@@ -120,5 +127,6 @@ public class DriverClass extends BaseTest{
 		loginPage.loginWithValidCredentials("506", "Test@123");
 		PathologistPage pathologistPage = new PathologistPage(driver);
 		pathologistPage.reportApproved(uhid);
+		loginPage.logout();
 	}
 }

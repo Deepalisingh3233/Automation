@@ -8,8 +8,10 @@
     <classes>
       <class name="eCare.Test.DriverClass">
         <methods>
-          <include name="OpdLabFO"/>
+          <include name="tearDown"/>
+          <include name="Pathologist"/>
           <include name="launchApplication"/>
+          <include name="OpdLabTechnician"/>
         </methods>
       </class> <!-- eCare.Test.DriverClass -->
     </classes>

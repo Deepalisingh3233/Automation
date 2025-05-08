@@ -65,11 +65,13 @@ public class AbstractComponents {
 		loginButton.click();
 	}
 	
-	public void logout() {
+	public void logout() throws InterruptedException {
+		Thread.sleep(2000);
 		waitForElementToClickable(logoutDropdown);
 		logoutDropdown.click();
 		waitForElementToAppear(signout);
 		signout.click();
+		waitForElementToAppear(loginEmail);
 	}
 	
 	public void selectDob() {

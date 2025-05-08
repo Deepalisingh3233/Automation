@@ -2,6 +2,7 @@ package eCare.PageObjects;
 
 import java.util.List;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -44,7 +45,7 @@ public class OpdLabTechnicianPage extends AbstractComponents{
 	}
 	
 	public void clickPatientName() throws InterruptedException {
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		waitForElementToClickable(patientName);
 		patientName.click();
 	}
@@ -58,7 +59,7 @@ public class OpdLabTechnicianPage extends AbstractComponents{
 		element.click();
 		numberInputs.stream()
         .filter(WebElement::isEnabled)
-        .forEach(input -> input.sendKeys("40"));
+        .forEach(input -> input.sendKeys("400", Keys.BACK_SPACE));
 		saveBtn.click();
 	}
 	
