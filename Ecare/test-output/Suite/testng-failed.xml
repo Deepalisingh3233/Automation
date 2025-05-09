@@ -9,9 +9,8 @@
       <class name="eCare.Test.DriverClass">
         <methods>
           <include name="tearDown"/>
-          <include name="Pathologist"/>
           <include name="launchApplication"/>
-          <include name="OpdLabTechnician"/>
+          <include name="Pathologist"/>
         </methods>
       </class> <!-- eCare.Test.DriverClass -->
     </classes>

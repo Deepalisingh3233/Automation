@@ -3,6 +3,7 @@ package eCare.AbstractComponent;
 import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
+import java.util.List;
 import java.util.concurrent.TimeoutException;
 
 import org.apache.commons.io.FileUtils;
@@ -85,6 +86,11 @@ public class AbstractComponents {
 	public void waitForElementToAppear(WebElement findBy) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		wait.until(ExpectedConditions.visibilityOf(findBy));
+	}
+	
+	public void waitForvisibilityOfAllElements(List<WebElement> viewReportText) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	    wait.until(ExpectedConditions.visibilityOfAllElements(viewReportText));
 	}
 	
 	public void waitForElementToClickable(WebElement findBy) {

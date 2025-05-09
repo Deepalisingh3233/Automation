@@ -115,7 +115,7 @@ public class OPDEMR extends AbstractComponents{
 		selectCBC();
 		selectAllergies();
 		fillSpecialInstructions();
-		selectIPDAdmission();
+//		selectIPDAdmission();
 	}
 	
 }

@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Complete OPD Flow</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>7/2/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>6/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu May 08 11:25:13 IST 2025</td>
+<td>Started on:</td><td>Fri May 09 11:59:54 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>180 seconds (180566 ms)</td>
+<tr><td>Total time:</td><td>224 seconds (224955 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,53 +76,33 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='eCare.Test.DriverClass.Pathologist()'><b>Pathologist</b><br>Test class: eCare.Test.DriverClass</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.xpath: //tbody/tr[2]/td[3]/div/span/span[1]&apos; (tried for 10 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at eCare.AbstractComponent.AbstractComponents.waitForElementToClickable(AbstractComponents.java:91)
-	at eCare.PageObjects.PathologistPage.clickPatientName(PathologistPage.java:43)
-	at eCare.PageObjects.PathologistPage.reportApproved(PathologistPage.java:62)
-	at eCare.Test.DriverClass.Pathologist(DriverClass.java:129)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//tbody/tr[2]/td[3]/div/span/span[1]&quot;}
-  (Session info: chrome=135.0.7049.52)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+<td title='eCare.Test.DriverClass.OpdPharmacyBooking()'><b>OpdPharmacyBooking</b><br>Test class: eCare.Test.DriverClass</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on linux (3f5d386a95eac471e63f2a46b0eeabc5)] -&gt; xpath: //*[contains(text(),&apos;Generate Invoice&apos;)]] (tried for 15 second(s) with 500 milliseconds interval)
 Build info: version: &apos;4.29.0&apos;, revision: &apos;5fc1ec94cb&apos;
 System info: os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.15.0-136-generic&apos;, java.version: &apos;17.0.14&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [dce6b8af947555571be290256bfc0aca, findElement {value=//tbody/tr[2]/td[3]/div/span/span[1], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.52, chrome: {chromedriverVersion: 135.0.7049.114 (63fd8a7d9d0..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:43685}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:43685/devtoo..., se:cdpVersion: 135.0.7049.52, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: dce6b8af947555571be290256bfc0aca
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy14.isDisplayed(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
-	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
-	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	... 32 more
-... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1528574692", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1528574692'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.xpath: //tbody/tr[2]/td[3]/div/span/span[1]&apos; (tried for 10 second(s) with 500 milliseconds interval)
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.52, chrome: {chromedriverVersion: 135.0.7049.114 (63fd8a7d9d0..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:36413}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:36413/devtoo..., se:cdpVersion: 135.0.7049.52, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3f5d386a95eac471e63f2a46b0eeabc5
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at eCare.AbstractComponent.AbstractComponents.waitForElementToClickable(AbstractComponents.java:91)
-	at eCare.PageObjects.PathologistPage.clickPatientName(PathologistPage.java:43)
-	at eCare.PageObjects.PathologistPage.reportApproved(PathologistPage.java:62)
-	at eCare.Test.DriverClass.Pathologist(DriverClass.java:129)
+	at eCare.AbstractComponent.AbstractComponents.waitForElementToAppear(AbstractComponents.java:87)
+	at eCare.PageObjects.PaymentPage.generateInvoice(PaymentPage.java:50)
+	at eCare.PageObjects.OpdPharmacy.opdPrescriptionBooking(OpdPharmacy.java:51)
+	at eCare.Test.DriverClass.OpdPharmacyBooking(DriverClass.java:89)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1130258687", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1130258687'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on linux (3f5d386a95eac471e63f2a46b0eeabc5)] -&gt; xpath: //*[contains(text(),&apos;Generate Invoice&apos;)]] (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.29.0&apos;, revision: &apos;5fc1ec94cb&apos;
+System info: os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.15.0-136-generic&apos;, java.version: &apos;17.0.14&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.52, chrome: {chromedriverVersion: 135.0.7049.114 (63fd8a7d9d0..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:36413}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:36413/devtoo..., se:cdpVersion: 135.0.7049.52, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3f5d386a95eac471e63f2a46b0eeabc5
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at eCare.AbstractComponent.AbstractComponents.waitForElementToAppear(AbstractComponents.java:87)
+	at eCare.PageObjects.PaymentPage.generateInvoice(PaymentPage.java:50)
+	at eCare.PageObjects.OpdPharmacy.opdPrescriptionBooking(OpdPharmacy.java:51)
+	at eCare.Test.DriverClass.OpdPharmacyBooking(DriverClass.java:89)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -151,44 +131,9 @@ Session ID: dce6b8af947555571be290256bfc0aca
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//tbody/tr[2]/td[3]/div/span/span[1]&quot;}
-  (Session info: chrome=135.0.7049.52)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.29.0&apos;, revision: &apos;5fc1ec94cb&apos;
-System info: os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.15.0-136-generic&apos;, java.version: &apos;17.0.14&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [dce6b8af947555571be290256bfc0aca, findElement {value=//tbody/tr[2]/td[3]/div/span/span[1], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.52, chrome: {chromedriverVersion: 135.0.7049.114 (63fd8a7d9d0..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:43685}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:43685/devtoo..., se:cdpVersion: 135.0.7049.52, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: dce6b8af947555571be290256bfc0aca
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy14.isDisplayed(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
-	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
-	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	... 32 more
 </pre></div></td>
-<td>26</td>
-<td>eCare.Test.DriverClass@451001e5</td></tr>
+<td>27</td>
+<td>eCare.Test.DriverClass@7d9d0818</td></tr>
 <tr>
 <td title='eCare.Test.DriverClass.OpdLabTechnician()'><b>OpdLabTechnician</b><br>Test class: eCare.Test.DriverClass</td>
 <td><div><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
@@ -197,10 +142,10 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: &apos;4.29.0&apos;, revision: &apos;5fc1ec94cb&apos;
 System info: os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.15.0-136-generic&apos;, java.version: &apos;17.0.14&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [dfb4a061eb86a6aff65b965342bddfb1, clickElement {id=f.92B4751ABB07BD655D3475E36C93B556.d.4890049EA25A24B8939AB8FFA72FC698.e.81}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.52, chrome: {chromedriverVersion: 135.0.7049.114 (63fd8a7d9d0..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:37457}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:37457/devtoo..., se:cdpVersion: 135.0.7049.52, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on linux (dfb4a061eb86a6aff65b965342bddfb1)] -&gt; xpath: //span[contains(text(),&apos;Add&apos;)]]
-Session ID: dfb4a061eb86a6aff65b965342bddfb1
+Command: [8b9395c6ad1884a002d6bfc69546d4fb, clickElement {id=f.EAB4DE20A1D4D96C636F1DB9C69E8EF8.d.4A47DA2D82C1CF3EA3CA69D0E88A0B01.e.98}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.52, chrome: {chromedriverVersion: 135.0.7049.114 (63fd8a7d9d0..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:33795}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:33795/devtoo..., se:cdpVersion: 135.0.7049.52, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (8b9395c6ad1884a002d6bfc69546d4fb)] -&gt; xpath: //span[contains(text(),&apos;Add&apos;)]]
+Session ID: 8b9395c6ad1884a002d6bfc69546d4fb
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -210,23 +155,24 @@ Session ID: dfb4a061eb86a6aff65b965342bddfb1
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
 	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
 	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at eCare.PageObjects.OpdLabTechnicianPage.fillReport(OpdLabTechnicianPage.java:58)
+	at eCare.PageObjects.OpdLabTechnicianPage.fillReport(OpdLabTechnicianPage.java:68)
+	at eCare.PageObjects.OpdLabTechnicianPage.lambda$0(OpdLabTechnicianPage.java:60)
 	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
 	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
-	at eCare.PageObjects.OpdLabTechnicianPage.clickAddReport(OpdLabTechnicianPage.java:54)
+	at eCare.PageObjects.OpdLabTechnicianPage.clickAddReport(OpdLabTechnicianPage.java:58)
 	at eCare.Test.DriverClass.OpdLabTechnician(DriverClass.java:118)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1725062057", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1725062057'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1459669467", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1459669467'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
   (Session info: chrome=135.0.7049.52)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
 Build info: version: &apos;4.29.0&apos;, revision: &apos;5fc1ec94cb&apos;
 System info: os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.15.0-136-generic&apos;, java.version: &apos;17.0.14&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [dfb4a061eb86a6aff65b965342bddfb1, clickElement {id=f.92B4751ABB07BD655D3475E36C93B556.d.4890049EA25A24B8939AB8FFA72FC698.e.81}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.52, chrome: {chromedriverVersion: 135.0.7049.114 (63fd8a7d9d0..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:37457}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:37457/devtoo..., se:cdpVersion: 135.0.7049.52, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on linux (dfb4a061eb86a6aff65b965342bddfb1)] -&gt; xpath: //span[contains(text(),&apos;Add&apos;)]]
-Session ID: dfb4a061eb86a6aff65b965342bddfb1
+Command: [8b9395c6ad1884a002d6bfc69546d4fb, clickElement {id=f.EAB4DE20A1D4D96C636F1DB9C69E8EF8.d.4A47DA2D82C1CF3EA3CA69D0E88A0B01.e.98}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.52, chrome: {chromedriverVersion: 135.0.7049.114 (63fd8a7d9d0..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:33795}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:33795/devtoo..., se:cdpVersion: 135.0.7049.52, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (8b9395c6ad1884a002d6bfc69546d4fb)] -&gt; xpath: //span[contains(text(),&apos;Add&apos;)]]
+Session ID: 8b9395c6ad1884a002d6bfc69546d4fb
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -241,10 +187,11 @@ Session ID: dfb4a061eb86a6aff65b965342bddfb1
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
 	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
 	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at eCare.PageObjects.OpdLabTechnicianPage.fillReport(OpdLabTechnicianPage.java:58)
+	at eCare.PageObjects.OpdLabTechnicianPage.fillReport(OpdLabTechnicianPage.java:68)
+	at eCare.PageObjects.OpdLabTechnicianPage.lambda$0(OpdLabTechnicianPage.java:60)
 	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
 	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
-	at eCare.PageObjects.OpdLabTechnicianPage.clickAddReport(OpdLabTechnicianPage.java:54)
+	at eCare.PageObjects.OpdLabTechnicianPage.clickAddReport(OpdLabTechnicianPage.java:58)
 	at eCare.Test.DriverClass.OpdLabTechnician(DriverClass.java:118)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
@@ -275,8 +222,8 @@ Session ID: dfb4a061eb86a6aff65b965342bddfb1
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>9</td>
-<td>eCare.Test.DriverClass@451001e5</td></tr>
+<td>13</td>
+<td>eCare.Test.DriverClass@7d9d0818</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -287,40 +234,35 @@ Session ID: dfb4a061eb86a6aff65b965342bddfb1
 <td><b>Instance</b></td>
 </tr>
 <tr>
+<td title='eCare.Test.DriverClass.OpdLabBooking()'><b>OpdLabBooking</b><br>Test class: eCare.Test.DriverClass</td>
+<td></td>
+<td>16</td>
+<td>eCare.Test.DriverClass@7d9d0818</td></tr>
+<tr>
 <td title='eCare.Test.DriverClass.BookAppointment()'><b>BookAppointment</b><br>Test class: eCare.Test.DriverClass</td>
 <td></td>
-<td>17</td>
-<td>eCare.Test.DriverClass@451001e5</td></tr>
-<tr>
-<td title='eCare.Test.DriverClass.Registration()'><b>Registration</b><br>Test class: eCare.Test.DriverClass</td>
-<td></td>
-<td>12</td>
-<td>eCare.Test.DriverClass@451001e5</td></tr>
+<td>24</td>
+<td>eCare.Test.DriverClass@7d9d0818</td></tr>
 <tr>
 <td title='eCare.Test.DriverClass.OpdLabFO()'><b>OpdLabFO</b><br>Test class: eCare.Test.DriverClass</td>
 <td></td>
-<td>7</td>
-<td>eCare.Test.DriverClass@451001e5</td></tr>
+<td>8</td>
+<td>eCare.Test.DriverClass@7d9d0818</td></tr>
+<tr>
+<td title='eCare.Test.DriverClass.Pathologist()'><b>Pathologist</b><br>Test class: eCare.Test.DriverClass</td>
+<td></td>
+<td>33</td>
+<td>eCare.Test.DriverClass@7d9d0818</td></tr>
 <tr>
 <td title='eCare.Test.DriverClass.OpdLabPhlebotomist()'><b>OpdLabPhlebotomist</b><br>Test class: eCare.Test.DriverClass</td>
 <td></td>
-<td>9</td>
-<td>eCare.Test.DriverClass@451001e5</td></tr>
-<tr>
-<td title='eCare.Test.DriverClass.OpdLabBooking()'><b>OpdLabBooking</b><br>Test class: eCare.Test.DriverClass</td>
-<td></td>
-<td>14</td>
-<td>eCare.Test.DriverClass@451001e5</td></tr>
-<tr>
-<td title='eCare.Test.DriverClass.OpdPharmacyBooking()'><b>OpdPharmacyBooking</b><br>Test class: eCare.Test.DriverClass</td>
-<td></td>
-<td>18</td>
-<td>eCare.Test.DriverClass@451001e5</td></tr>
+<td>10</td>
+<td>eCare.Test.DriverClass@7d9d0818</td></tr>
 <tr>
 <td title='eCare.Test.DriverClass.OpdDoctorFlow()'><b>OpdDoctorFlow</b><br>Test class: eCare.Test.DriverClass</td>
 <td></td>
-<td>45</td>
-<td>eCare.Test.DriverClass@451001e5</td></tr>
+<td>48</td>
+<td>eCare.Test.DriverClass@7d9d0818</td></tr>
 </table><p>
 </body>
 </html>

@@ -2,6 +2,7 @@ package eCare.PageObjects;
 
 import java.util.List;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -52,15 +53,25 @@ public class OpdLabTechnicianPage extends AbstractComponents{
 	
 	public void clickAddReport() throws InterruptedException {
 		Thread.sleep(2000);
-		addReportText.stream().forEach(this::fillReport);
+		waitForvisibilityOfAllElements(addReportText);
+//		addReportText.stream().forEach(this::fillReport);	
+	    List<WebElement> updatedAddReportText = driver.findElements(By.xpath("//span[contains(text(),'Add')]"));
+	    for (WebElement element : updatedAddReportText) {
+			fillReport(element);
+			Thread.sleep(2000);
+			updatedAddReportText = driver.findElements(By.xpath("//span[contains(text(),'Add')]"));
+		} 
 	}
 	
-	public void fillReport(WebElement element) {
+	public void fillReport(WebElement element) throws InterruptedException {
+		waitForElementToClickable(element);
 		element.click();
 		numberInputs.stream()
         .filter(WebElement::isEnabled)
         .forEach(input -> input.sendKeys("400", Keys.BACK_SPACE));
+		Thread.sleep(2000);
 		saveBtn.click();
+		Thread.sleep(2000);
 	}
 	
 	public void clickApproveCheckboxes() {

@@ -11,6 +11,9 @@
 		<classes>
 			<class name="eCare.Test.DriverClass">
 			<methods>
+				<!-- <include name="OpdLabBooking"/>
+				<include name="OpdLabFO"/>
+				<include name="OpdLabPhlebotomist"/>-->
 				<include name="OpdLabTechnician"/>
 				<include name="Pathologist"/>
 			</methods>

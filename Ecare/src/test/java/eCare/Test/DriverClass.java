@@ -10,11 +10,11 @@ import eCare.TestComponents.BaseTest;
 public class DriverClass extends BaseTest{
 
 //	String uhid;
-	String uhid = "000004723";
+	String uhid = "000004729";
 
 //	AbstractComponents loginPage = new AbstractComponents(driver);
 
-	@Test(priority = 1)
+//	@Test(priority = 1)
 	public void Registration() throws InterruptedException, IOException 
 		{
 			AbstractComponents loginPage = new AbstractComponents(driver);
@@ -30,8 +30,8 @@ public class DriverClass extends BaseTest{
 			paymentPage.cancelInvoice();
 		}
 	
-	@Test(dependsOnMethods = "Registration", priority = 2)
-//	@Test
+//	@Test(dependsOnMethods = "Registration", priority = 2)
+	@Test
 	public void BookAppointment() throws InterruptedException, IOException {
 		AbstractComponents loginPage = new AbstractComponents(driver);
 		loginPage.loginWithValidCredentials("105", "Unicode@2022$");
