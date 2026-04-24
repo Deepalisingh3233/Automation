@@ -1,5 +1,7 @@
 # Selenium 
 From Basic to Advance.
+https://www.one-tab.com/page/WAqnTPTaSImss2QsZYfIFg 
+https://www.dropbox.com/scl/fi/hzvjoi9qgo9m83zwse2vg/Software-Testing-Notes.docx?rlkey=c5xcf4p7fux3xdobxm24xxn6b&st=1bfze1oq&dl=0 
 
 # Software testing
 Software testing is divided into two parts:-

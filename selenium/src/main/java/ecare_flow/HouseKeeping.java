@@ -32,7 +32,7 @@ public class HouseKeeping {
 
 				// Select Start Time
 				driver.findElement(By.xpath("//input[@placeholder='Start Time']")).click();
-				Thread.sleep(1000);
+				Thread.sleep(2000);
 				driver.findElement(By.xpath("//ul[@data-type='meridiem']/li")).click();
 				driver.findElement(By.xpath("//span[text()='OK']")).click();
 
@@ -41,7 +41,8 @@ public class HouseKeeping {
 				driver.findElement(By.xpath("//span[text()='OK']")).click();
 
 				// Select Housekeeper name
-				driver.findElement(By.id("rc_select_0")).sendKeys("Suresh");
+				Thread.sleep(2000);
+				driver.findElement(By.id("rc_select_1")).sendKeys("Suresh");
 				Thread.sleep(2000);
 				driver.findElement(By.xpath("//div[@class='ant-select-item-option-content']/div/div[2]")).click();
 
