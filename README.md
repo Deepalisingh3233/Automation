@@ -1,7 +1,13 @@
 # Selenium 
 From Basic to Advance.
+<<<<<<< HEAD
 https://www.one-tab.com/page/WAqnTPTaSImss2QsZYfIFg 
 https://www.dropbox.com/scl/fi/hzvjoi9qgo9m83zwse2vg/Software-Testing-Notes.docx?rlkey=c5xcf4p7fux3xdobxm24xxn6b&st=1bfze1oq&dl=0 
+=======
+[Software Testing Notes](https://www.dropbox.com/scl/fi/hzvjoi9qgo9m83zwse2vg/Document-1.docx?e=2&new=1&rlkey=c5xcf4p7fux3xdobxm24xxn6b&dl=0)
+[Test Cases ](https://www.one-tab.com/page/WAqnTPTaSImss2QsZYfIFg)
+[Google Drive Link ](https://drive.google.com/drive/folders/1pBUYDXa2tcW_1UfI_SXdnMPQ797AHNZB)
+>>>>>>> 481a2f915a2fe280ec899f05fb2277ff6fbebfc8
 
 # Software testing
 Software testing is divided into two parts:-
