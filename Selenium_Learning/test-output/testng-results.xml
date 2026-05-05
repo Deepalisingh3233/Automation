@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="3" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-04-27T19:06:21 IST" name="Default suite" finished-at="2026-04-27T19:06:29 IST" duration-ms="8139">
+  <suite started-at="2026-05-05T18:57:07 IST" name="Default suite" finished-at="2026-05-05T18:57:29 IST" duration-ms="22178">
     <groups>
     </groups>
-    <test started-at="2026-04-27T19:06:21 IST" name="Default test" finished-at="2026-04-27T19:06:29 IST" duration-ms="8139">
-      <class name="selenium_learning.LocatorTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:selenium_learning.LocatorTest@40ef3420]" started-at="2026-04-27T19:06:21 IST" name="setUp" finished-at="2026-04-27T19:06:22 IST" duration-ms="990" status="PASS">
+    <test started-at="2026-05-05T18:57:07 IST" name="Default test" finished-at="2026-05-05T18:57:29 IST" duration-ms="22178">
+      <class name="selenium_learning.XpathLocatorTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:selenium_learning.XpathLocatorTest@333291e3]" started-at="2026-05-05T18:57:07 IST" name="setUp" finished-at="2026-05-05T18:57:08 IST" duration-ms="983" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="addItemToCart()[pri:0, instance:selenium_learning.LocatorTest@40ef3420]" started-at="2026-04-27T19:06:22 IST" name="addItemToCart" finished-at="2026-04-27T19:06:29 IST" duration-ms="7040" status="PASS">
+        <test-method signature="xpathLocatorTest()[pri:0, instance:selenium_learning.XpathLocatorTest@333291e3]" started-at="2026-05-05T18:57:08 IST" name="xpathLocatorTest" finished-at="2026-05-05T18:57:29 IST" duration-ms="21072" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addItemToCart -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:selenium_learning.LocatorTest@40ef3420]" started-at="2026-04-27T19:06:29 IST" name="tearDown" finished-at="2026-04-27T19:06:29 IST" duration-ms="82" status="PASS">
+        </test-method> <!-- xpathLocatorTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:selenium_learning.XpathLocatorTest@333291e3]" started-at="2026-05-05T18:57:29 IST" name="tearDown" finished-at="2026-05-05T18:57:29 IST" duration-ms="86" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- selenium_learning.LocatorTest -->
+      </class> <!-- selenium_learning.XpathLocatorTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

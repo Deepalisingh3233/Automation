@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="selenium_learning.LocatorTest">
+      <class name="selenium_learning.XpathLocatorTest">
         <methods>
           <include name="setUp"/>
+          <include name="xpathLocatorTest"/>
           <include name="tearDown"/>
-          <include name="addItemToCart"/>
         </methods>
-      </class> <!-- selenium_learning.LocatorTest -->
+      </class> <!-- selenium_learning.XpathLocatorTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

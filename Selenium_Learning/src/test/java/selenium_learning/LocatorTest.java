@@ -1,6 +1,7 @@
 package selenium_learning;
 
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -115,6 +116,77 @@ public class LocatorTest {
 		
 		Assert.assertTrue(cartItemEl.isDisplayed());
 		Assert.assertTrue(cartItemEl.isEnabled());
+	}
+	
+	@Test
+	public void tagNameLocatorTest() {
+		driver.get(SITE);
+		
+		WebElement imgEl = driver.findElement(By.tagName("img"));
+		
+		String srcAttr = imgEl.getAttribute("src");
+		
+		Assert.assertNotNull(srcAttr);
+		
+		System.out.println("Image Source: " + srcAttr);
+		
+	}
+	
+	@Test
+	public void tagNameMultiLocatorsTest() {
+		driver.get(SITE);
+		
+		List<WebElement> imgEls = driver.findElements(By.tagName("img"));
+		for(WebElement imgEl : imgEls) {
+			String srcAttr = imgEl.getAttribute("src");
+			
+			System.out.println("Image Source: " + srcAttr);
+		}
+	}
+	
+	@Test
+	public void complexTagNameLocatorTest() {
+		driver.get(SITE);
+		
+		List<WebElement> catagoriesEls = driver.findElements(By.id("itemc"));
+		
+		for(WebElement catagoryEl : catagoriesEls) {
+			System.out.println("-----------------------");
+			System.out.println("Catagory clicked: " + catagoryEl.getText());
+			catagoryEl.click();
+			
+			delay();
+			
+			WebElement containerEl = driver.findElement(By.id("tbodyid"));
+			
+			List<WebElement> linkEls = containerEl.findElements(By.tagName("a"));
+			
+			for (WebElement linkEl : linkEls) {
+				String hrefAttr = linkEl.getAttribute("href");
+				Assert.assertNotNull(hrefAttr);
+				
+				System.out.println("URL: "+ hrefAttr);
+			}
+		}
+	}
+	
+	@Test
+	public void paginationTest() {
+		driver.get(SITE);
+		
+		WebElement formEl = driver.findElement(By.name("frm"));
+		
+		Assert.assertTrue(formEl.isEnabled());
+		Assert.assertTrue(formEl.isDisplayed());
+		
+		List<WebElement> buttonsEl = formEl.findElements(By.tagName("button"));
+		
+		Assert.assertEquals(buttonsEl.size(), 2);
+		Assert.assertTrue(buttonsEl.get(0).isDisplayed());
+		Assert.assertTrue(buttonsEl.get(1).isDisplayed());
+		
+		System.out.println("Button Text: "+buttonsEl.get(0).getText());
+		System.out.println("Button Text: "+buttonsEl.get(1).getText());
 	}
 	
 	@AfterTest
