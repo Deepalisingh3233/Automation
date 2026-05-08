@@ -1,9 +1,13 @@
 package selenium_learning;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -15,6 +19,7 @@ public class HoverDragDrop {
 
 	private WebDriver driver;
 	private static final String SITE = "https://demoqa.com/menu";
+	private static final String DRAGSITE = "https://demoqa.com/droppable";
 	
 	@BeforeTest
 	public void setUp() {
@@ -64,6 +69,20 @@ public class HoverDragDrop {
 
 		System.out.println("**************************Sub Menu hovering is done***************************");
 
+	}
+	
+	@Test
+	public void dragDropTest() {
+		driver.get(DRAGSITE);
+		WebElement draggable = driver.findElement(By.id("draggable"));
+		WebElement droppable = driver.findElement(By.id("droppable"));
+		
+		delay();
+
+		new Actions(driver).dragAndDrop(draggable, droppable).perform();
+		
+		Assert.assertEquals(droppable.getText(), "Dropped!");
+		delay();
 	}
 	
 	@AfterTest

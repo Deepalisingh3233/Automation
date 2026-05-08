@@ -7,7 +7,7 @@
         <methods>
           <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="hoverTest"/>
+          <include name="dragDropTest"/>
         </methods>
       </class> <!-- selenium_learning.HoverDragDrop -->
     </classes>
