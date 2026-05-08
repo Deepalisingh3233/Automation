@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="selenium_learning.RelativeLocators">
+      <class name="selenium_learning.HoverDragDrop">
         <methods>
-          <include name="relativeLocatorsToLeftOfTest"/>
-          <include name="setUp"/>
           <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="hoverTest"/>
         </methods>
-      </class> <!-- selenium_learning.RelativeLocators -->
+      </class> <!-- selenium_learning.HoverDragDrop -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
