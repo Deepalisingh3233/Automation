@@ -2,24 +2,24 @@
 <testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-05-08T13:50:05 IST" name="Default suite" finished-at="2026-05-08T13:50:22 IST" duration-ms="17034">
+  <suite started-at="2026-05-11T12:03:56 IST" name="Default suite" finished-at="2026-05-11T12:04:09 IST" duration-ms="13544">
     <groups>
     </groups>
-    <test started-at="2026-05-08T13:50:05 IST" name="Default test" finished-at="2026-05-08T13:50:22 IST" duration-ms="17034">
-      <class name="selenium_learning.HoverDragDrop">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:selenium_learning.HoverDragDrop@479d31f3]" started-at="2026-05-08T13:50:05 IST" name="setUp" finished-at="2026-05-08T13:50:06 IST" duration-ms="1045" status="PASS">
+    <test started-at="2026-05-11T12:03:56 IST" name="Default test" finished-at="2026-05-11T12:04:09 IST" duration-ms="13544">
+      <class name="selenium_learning.UIWidgetsTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:selenium_learning.UIWidgetsTest@479d31f3]" started-at="2026-05-11T12:03:56 IST" name="setUp" finished-at="2026-05-11T12:03:57 IST" duration-ms="977" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="dragDropTest()[pri:0, instance:selenium_learning.HoverDragDrop@479d31f3]" started-at="2026-05-08T13:50:06 IST" name="dragDropTest" finished-at="2026-05-08T13:50:22 IST" duration-ms="15860" status="PASS">
+        <test-method signature="checkboxesTest()[pri:0, instance:selenium_learning.UIWidgetsTest@479d31f3]" started-at="2026-05-11T12:03:57 IST" name="checkboxesTest" finished-at="2026-05-11T12:04:09 IST" duration-ms="12454" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- dragDropTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:selenium_learning.HoverDragDrop@479d31f3]" started-at="2026-05-08T13:50:22 IST" name="tearDown" finished-at="2026-05-08T13:50:22 IST" duration-ms="84" status="PASS">
+        </test-method> <!-- checkboxesTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:selenium_learning.UIWidgetsTest@479d31f3]" started-at="2026-05-11T12:04:09 IST" name="tearDown" finished-at="2026-05-11T12:04:09 IST" duration-ms="75" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- selenium_learning.HoverDragDrop -->
+      </class> <!-- selenium_learning.UIWidgetsTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

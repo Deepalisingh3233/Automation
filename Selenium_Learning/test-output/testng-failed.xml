@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="selenium_learning.HoverDragDrop">
+      <class name="selenium_learning.UIWidgetsTest">
         <methods>
-          <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="dragDropTest"/>
+          <include name="tearDown"/>
+          <include name="uiWidgetTest"/>
         </methods>
-      </class> <!-- selenium_learning.HoverDragDrop -->
+      </class> <!-- selenium_learning.UIWidgetsTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
